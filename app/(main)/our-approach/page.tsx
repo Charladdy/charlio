@@ -61,7 +61,7 @@ export default function page(){
                     <div className="flow-chart-detail">
                         {flowState==0 && 
                         <>
-                            <div>This graph demonstrates the lifecycle of a typical CharChar Webworks project. Click any of the buttons to the left to get started.</div>
+                            <div>This graph demonstrates the lifecycle of a typical Charlio Webworks project. Click any of the buttons to the left to get started.</div>
                         </>                    
                         }
                         {flowState==1 && 
@@ -70,7 +70,7 @@ export default function page(){
                             <div className="lottie-left w-40">
                                 <Lottie animationData={flowchartData} autoplay={true} loop={false}/>
                             </div>
-                            After reviewing your requirements, CharChar puts together an initial design that includes a sitemap and a mockup of every page that will make up the site.</div>
+                            After reviewing your requirements, Charlio puts together an initial design that includes a sitemap and a mockup of every page that will make up the site.</div>
                             <div>Both the sitemap and mockup will be sent to you for review and approval once they are complete.</div>
                         </>
                         }
@@ -92,14 +92,14 @@ export default function page(){
                         }
                         {flowState==4 && 
                         <>
-                        <div>Showtime! CharChar Webworks configures the hosting of your website on the hosting provider of your choice and updates any additional backend services for production on your new, live website!</div>
+                        <div>Showtime! Charlio configures the hosting of your website on the hosting provider of your choice and updates any additional backend services for production on your new, live website!</div>
                         </>                    
                         }
                     </div>
                 </div>
                         <p>To get started, you'll need to supply the content that will fill your site's pages — including copy, logos, product descriptions, pricing information, and photos.</p>
                         <p>Our websites follow a mobile-first approach. Multiple studies show that over half of web traffic is coming from mobile devices. In fact, Google’s algorithm ranks responsive pages that can adapt to mobile devices higher than their counterparts that do not.</p>
-                        <p>CharChar also strongly recommends using analytics to track how users interact with your site. Analytics platforms like Google Analytics let you know where your users are visiting your site from (for example, search engine results, company posts on social media, etc.), which pages on your site they are viewing, and how long their visits last.</p>
+                        <p>Charlio also strongly recommends using analytics to track how users interact with your site. Analytics platforms like Google Analytics let you know where your users are visiting your site from (for example, search engine results, company posts on social media, etc.), which pages on your site they are viewing, and how long their visits last.</p>
             </div>
         </>
     )

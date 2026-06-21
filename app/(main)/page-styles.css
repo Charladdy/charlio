@@ -173,6 +173,17 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .hero-footer{
+    bottom: -25vw;
+  }
+
+  .hero-word {
+    height: 75px;
+    padding: 4vw;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .fill-div{
     height: 95vh;

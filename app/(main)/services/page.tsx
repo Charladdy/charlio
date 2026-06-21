@@ -7,15 +7,15 @@ export default function Page(){
         <div className='vert-gfx-div'/>
         <div className='hor-gfx-div'/>  
         <div className="page-content">
-            <p>From design and development to ecommerce and SEO, CharChar Webworks offers everything you need to build a powerful online presence. We handle the technical side so you can focus on running your business.</p>
+            <p>From design and development to ecommerce and SEO, Charlio Webworks offers everything you need to build a powerful online presence. We handle the technical side so you can focus on running your business.</p>
             <IconHeaderDiv iconSrcStr="/icons/design.png" iconWidth={80} iconHeight={80} 
             iconAltTxt="Web Design" headerStr="Web Design">
-                <p>CharChar designs a website that meets your organization's needs and goals.</p>
+                <p>Charlio designs a website that meets your organization's needs and goals.</p>
             </IconHeaderDiv>
 
             <IconHeaderDiv iconSrcStr="/icons/front_end.png" iconWidth={80} iconHeight={80} 
             iconAltTxt="Front end development" headerStr="Front End Development">
-                <p>CharChar creates pages that conform to your specifications using a responsive, mobile-first approach.</p>
+                <p>Charlio creates pages that conform to your specifications using a responsive, mobile-first approach.</p>
             </IconHeaderDiv>
 
             <IconHeaderDiv iconSrcStr="/icons/back_end.png" iconWidth={80} iconHeight={80} 
@@ -40,7 +40,7 @@ export default function Page(){
 
             <IconHeaderDiv iconSrcStr="/icons/art.png" iconWidth={80} iconHeight={80} 
             iconAltTxt="Search Engine Optimization" headerStr="Graphic Asset Creation">
-                <p>CharChar can create graphical assets to suit your page's theme and needs. Note that this is limited to vector art like custom buttons or backgrounds and does not include logo design or photography.</p>
+                <p>Charlio can create graphical assets to suit your page's theme and needs. Note that this is limited to vector art like custom buttons or backgrounds and does not include logo design or photography.</p>
             </IconHeaderDiv>
         </div>
         </>

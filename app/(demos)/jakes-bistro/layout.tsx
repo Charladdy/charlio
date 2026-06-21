@@ -40,7 +40,7 @@ export default function RootLayout({
             </Link>
           </div>
           
-          <div className="absolute left-1/2 -translate-x-1/2 top-2/5 -translate-y-1/2 flex h-10 justify-center items-center w-[340px]">
+          <div className="absolute left-1/2 -translate-x-1/2 top-2/5 -translate-y-1/2 flex h-10 justify-center items-center w-[340px] pointer-events-none">
           </div>
           <div className="invisible md:visible">
             <HorizontalNavMenu links={[
