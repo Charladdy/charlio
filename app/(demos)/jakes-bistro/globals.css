@@ -96,7 +96,7 @@ li:hover{
 }
 
 .nav-menu{
-    position: absolute;
+    position: fixed;
     background: white;
     color: black;
     top: 0;

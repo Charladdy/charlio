@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <g id="c" data-name="icons">
+    <g id="d" data-name="front_end">
+      <rect width="150" height="150" fill="none"/>
+      <g>
+        <path d="M46.668,110.595L3.937,83.068v-15.233l42.731-27.36v17.926l-29.767,16.883,29.767,17.52v17.792Z"/>
+        <path d="M74.793,122.669l15.435-95.338h8.961l-15.593,95.338h-8.803Z"/>
+        <path d="M103.073,110.658v-17.792l29.871-17.395-29.871-17.249v-17.686l42.783,27.491v15.067l-42.783,27.563Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

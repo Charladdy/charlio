@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.266" height="22.835" viewBox="0 0 31.266 22.835">
+  <g id="c" data-name="chards site">
+    <g id="d" data-name="hamburger-menu">
+      <line y1="20.335" x2="31.266" y2="20.335" fill="#dfdfdf" stroke="#dfdfdf" stroke-miterlimit="10" stroke-width="5"/>
+      <line y1="11.417" x2="31.266" y2="11.417" fill="#dfdfdf" stroke="#dfdfdf" stroke-miterlimit="10" stroke-width="5"/>
+      <line y1="2.5" x2="31.266" y2="2.5" fill="#dfdfdf" stroke="#dfdfdf" stroke-miterlimit="10" stroke-width="5"/>
+    </g>
+  </g>
+</svg>

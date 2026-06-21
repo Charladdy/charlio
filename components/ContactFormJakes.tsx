@@ -33,7 +33,7 @@ export default function ContactFormJakes({
       )}
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="category">Preferred Date:</label>
+        <div className="contact-form-label"><label htmlFor="date">Preferred Date:</label></div>
         <input
           className="contact-form-input"
           id="date"
@@ -43,7 +43,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="category">Number of guests</label>
+        <div  className="contact-form-label"><label htmlFor="category">Number of guests</label></div>
         <select
           className="contact-form-input contact-form-list"
           id="category"
@@ -57,7 +57,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="firstname">First Name</label>
+        <div  className="contact-form-label"><label htmlFor="firstname">First Name</label></div>
         <input
           className="contact-form-input"
           id="firstname"
@@ -67,7 +67,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="lastname">Last Name</label>
+        <div  className="contact-form-label"><label htmlFor="lastname">Last Name</label></div>
         <input
           className="contact-form-input"
           id="lastname"
@@ -77,9 +77,9 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="email">
+        <div  className="contact-form-label"><label htmlFor="email">
           Email <span aria-hidden="true">*</span>
-        </label>
+        </label></div>
         <input
           className="contact-form-input"
           id="email"
@@ -90,7 +90,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="subject">Type of Event</label>
+        <div  className="contact-form-label"><label htmlFor="subject">Type of Event</label></div>
         <input
           className="contact-form-input"
           id="subject"
@@ -100,11 +100,11 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field h-30">
-        <label className="contact-form-label" htmlFor="message">
+        <div  className="contact-form-label"><label htmlFor="message">
           Your Message <span aria-hidden="true">*</span>
-        </label>
+        </label></div>
         <textarea
-          className="contact-form-input w-80 h-30"
+          className="contact-form-input w-[50vw] md:w-80 h-30"
           id="message"
           name="message"
           maxLength={1500}

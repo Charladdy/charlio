@@ -32,14 +32,14 @@ export default function RootLayout({
       <body>
         <div className="navbar">
           <div className="absolute left-15 top-10 h-30 w-20">
-            <Link href="/plumb-perfect">
-              <Image src="/plumb-monogram.png" alt="Plumb Perfect" fill sizes="auto auto" loading='eager' />
+            <Link href="/yardsdale-plumbing-co">
+              <Image src="/plumb-monogram.png" alt="Yardsdale Plumbing Company" fill sizes="auto auto" loading='eager' />
             </Link>
           </div>
           
           <div className="invisible md:visible absolute left-1/2 -translate-x-1/2 top-2/5 -translate-y-1/2 flex h-10 justify-center items-center w-[340px]">
-            <Link href="/plumb-perfect">
-              <Image src="/plumb-wordmark.png" alt="Plumb Perfect" fill sizes="auto auto" loading='eager' />
+            <Link href="/yardsdale-plumbing-co">
+              <Image src="/plumb-wordmark.png" alt="Yardsdale Plumbing Company" fill sizes="auto auto" loading='eager' />
             </Link>
           </div>
           <div className="invisible md:visible">
@@ -50,7 +50,7 @@ export default function RootLayout({
             ]} />
           </div>
           <div className="float-right mt-20 mr-10 md:hidden">
-            <NavMenu links = {[
+            <NavMenu hamburgerDarkSrc="/hamburger-menu.svg" links = {[
             { label: 'Our Story', href: '/yardsdale-plumbing-co/our-story' },
               { label: 'Our Services', href: '/yardsdale-plumbing-co/services' },
               { label: 'Contact Us', href: '/yardsdale-plumbing-co/contact' },

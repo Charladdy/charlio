@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <g id="c" data-name="icons">
+    <g id="d" data-name="ecommerce">
+      <rect width="150" height="150" fill="none"/>
+      <path d="M16.101,23.632c27.73,2.202,24.475,13.628,24.255,71.536h85.176l3.523-55.023H42.743" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <circle cx="115.844" cy="123.796" r="6.606" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <circle cx="52.533" cy="123.796" r="6.606" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <polyline points="124.651 109.733 38.339 109.733 48.908 95.169" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

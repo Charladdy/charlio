@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g id="c" data-name="plumbing">
+    <g>
+      <circle cx="256" cy="256" r="256" fill="#fff"/>
+      <g>
+        <line x1="269.485" y1="66.642" x2="269.485" y2="327.839" fill="none" stroke="#242633" stroke-miterlimit="10" stroke-width="50"/>
+        <path d="M269.485,256.144c38.384,0,112.425-1.298,112.425-69.501s-74.041-69.501-112.425-69.501" fill="none" stroke="#242633" stroke-miterlimit="10" stroke-width="50"/>
+        <path d="M267.513,321.407c-14.053-18.043-35.984-29.648-60.625-29.648-42.415,0-76.799,34.384-76.799,76.799s34.384,76.799,76.799,76.799c24.642,0,46.573-11.606,60.626-29.649" fill="none" stroke="#242633" stroke-miterlimit="10" stroke-width="50"/>
+        <path d="M130.484,66.642c0,38.384-9.901,128.347,69.501,128.347s69.501-89.963,69.501-128.347" fill="none" stroke="#242633" stroke-miterlimit="10" stroke-width="50"/>
+      </g>
+    </g>
+  </g>
+</svg>

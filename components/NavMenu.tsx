@@ -12,9 +12,10 @@ interface NavLink {
 interface NavMenuProps {
   links: NavLink[]
   hamburgerSrc?: string
+  hamburgerDarkSrc?: string
 }
 
-export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.png' }: NavMenuProps) {
+export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.svg', hamburgerDarkSrc = '/hamburger-menu_dark.svg' }: NavMenuProps) {
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
@@ -30,7 +31,8 @@ export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.png' }:
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
       >
-        <Image src={hamburgerSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
+        <Image className="dark:invisible" src={hamburgerSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
+        <Image className="invisible dark:visible" src={hamburgerDarkSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
       </button>
 
       {mounted && open && createPortal(

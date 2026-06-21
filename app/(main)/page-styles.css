@@ -175,12 +175,17 @@
 
 @media screen and (max-width: 650px) {
   .hero-footer{
-    bottom: -25vw;
+    height: 15%;
+  }
+
+  .hero-text-right{
+    height: 15%;
+    margin-top: -5%;
   }
 
   .hero-word {
     height: 75px;
-    padding: 4vw;
+    padding: 2vw;
   }
 }
 

@@ -1,7 +1,14 @@
 .package-grid{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    background: #372b8c;
+    background: linear-gradient(
+        155deg,
+        #9b4fd0 0%,
+        var(--main-palette2) 20%,
+        var(--main-palette4) 60%,
+        var(--main-palette5) 75%,
+        #3d1957 100%
+    );
     border-radius: 15px;
     box-shadow: 5px 8px 6px 4px rgba(0,0,0,0.4);
     padding: 15px;
@@ -11,7 +18,14 @@
 .alacarte-grid{
     display: grid;
     grid-template-columns: auto auto;
-    background: #372b8c;
+    background: linear-gradient(
+        155deg,
+        #9b4fd0 0%,
+        var(--main-palette2) 20%,
+        var(--main-palette4) 60%,
+        var(--main-palette5) 75%,
+        #3d1957 100%
+    );
     border-radius: 15px;
     box-shadow: 5px 8px 6px 4px rgba(0,0,0,0.4);
     padding: 15px;
@@ -21,7 +35,8 @@
 
 .grid-box{
     background: rgba(225,225,225,0.7);
-    border: solid 1px;
+    border: solid 1px #171717;
+    color: #171717; 
     padding: 5px;
 }
 

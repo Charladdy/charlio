@@ -38,7 +38,8 @@ export default function RootLayout({
             { label: 'Contact Us', href: '/contact' },
           ]} />
           <Link href="/" className="navbar-logo-wrapper">
-            <Image src="/charlio wordmark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
+            <Image className="dark:invisible" src="/charlio wordmark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
+            <Image className="invisible dark:visible" src="/charlio wordmark_dark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
           </Link>
         </div>  
         {children}

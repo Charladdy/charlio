@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <g id="c" data-name="icons">
+    <g id="d" data-name="design">
+      <rect width="150" height="150" fill="none"/>
+      <line x1="39.115" y1="85.608" x2="75" y2="23.775" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <line x1="109.853" y1="85.608" x2="73.968" y2="23.775" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+      <polyline points="21.236 109.32 52.94 54.691 54.688 63.753 12.832 135.875"/>
+      <polygon points="129.237 126.908 89.471 58.389 96.391 54.374 136.581 123.623 139.034 135.875 129.237 126.908"/>
+      <circle cx="75" cy="23.775" r="8.009"/>
+      <path d="M51.501,64.266c6.654,3.7,14.314,5.807,22.467,5.807,8.472,0,16.412-2.275,23.243-6.249" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

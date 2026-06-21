@@ -80,7 +80,7 @@ export default function page(){
                                 <div className="lottie-right w-40">
                                     <Lottie animationData={animationData} autoplay={true} loop={false}/>
                                 </div>
-                                We get to work on your website based on the mockups and your feedback. All of our sites are responsive and designed to look well on virtually any consumer device.
+                                <p className="mt-4">We get to work on your website based on the mockups and your feedback. All of our sites are responsive and designed to look well on virtually any consumer device.</p>
                             </div>                             
                             <div>Once the initial front end is complete, you will be able to try it out and request any changes you would like to see.</div>
                         </>

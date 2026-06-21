@@ -1,15 +1,8 @@
 @import "tailwindcss";
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-  }
-}
-
   :root {
     --background: #fff;
-    --foreground: #1f1f1f;
+    --foreground: #171717;
     --nav-height: 120px;
     --footer-height: 80px;
     --hero-footer-height: 150px;
@@ -75,7 +68,7 @@ p {
   top:0;
   position: fixed;
   box-shadow: 0 12px 20px 5px rgba(0,0,0,0.3);
-  background: #fff;
+  background: var(--background);
   display: flex;
   align-items: center;
   padding: 0 24px;
@@ -95,7 +88,7 @@ p {
   left: 0;  
   right: 0;
   top: var(--nav-height);
-  height: 58px;
+  height: 65px;
   background: var(--background);
   z-index: 1;
 }
@@ -118,8 +111,7 @@ p {
   left: 0;  
   right: 0;
   top: calc(50px + var(--nav-height));
-  bottom: 0;
-  border: solid 1px;
+  bottom: 0;  
   border-top: 8px solid var(--main-palette4);
   border-bottom: 2px solid var(--main-palette5);
   z-index: 1;
@@ -160,7 +152,7 @@ p {
   top: 0;
   height: 100vh;
   width: 260px;
-  background: #fff;
+  background: var(--background);
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
   padding-top: max(10vh, 150px);
   z-index: 1;
@@ -295,14 +287,6 @@ p {
   );
 }
 
-.main-content-div{
-  padding: 50px 25%;
-  position: relative;
-  bottom: 0;
-  min-height: 20vh;
-  background: #fff;
-}
-
 .footer-div{
   height: var(--footer-height);
   padding-top: 30px;
@@ -320,8 +304,27 @@ p {
 
 @media screen and (max-width: 650px){
 
+  .navbar-logo-wrapper{    
+    left: 25px;
+    transform: none;
+    height: 80%;
+    top: calc(var(--nav-height) / 6);
+    width: 50vw;
+  }
+
   .hamburger-btn{
-    margin-left: -2vw;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: calc(var(--nav-height) / 4);
+    width: 10vw;
+    height: auto;
+  }
+
+  .nav-menu{
+    position: fixed;
+    right: 0;
+    left: auto;
   }
 
   .page-content{
@@ -332,7 +335,7 @@ p {
 
   .vert-gfx-div{
     width: 10px;
-    left: 5vw;  
+    left: 0;  
     border-left: 5px solid var(--main-palette1);
     border-right: 4px solid rgba(0,0,0, 0.5);
   }
@@ -344,8 +347,9 @@ p {
 
   .flow-chart-buttons{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 80px;
+    gap: 5vw;
     margin-bottom: 20px;
   }
 
@@ -357,9 +361,10 @@ p {
       var(--main-palette2) 40%,
       #3d1957 100%
     );
-    font-size: 0.8em;
-    font-weight: 500;
+    font-size: 4vw;
+    font-weight: 600;
     width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     min-height: 50px;
@@ -368,16 +373,31 @@ p {
     border-radius: 8px;
     margin: 0;
     z-index: 0;
+    padding: 5%;
   }
 
   .flow-chart-detail{
     margin: auto;
     height: fit-content;
+    font-size: 3.5vw;
+    font-weight: 500;
   }
 }
 
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ffffff;
+    --background: #171717;
+  }
+
+  .navbar {
+    box-shadow: 0 12px 20px 5px rgba(120,120,120,0.4);
   }
 }

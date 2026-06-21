@@ -9,7 +9,8 @@ export default function page(){
                 <Image className="w-[50%] float-left mr-2" src="/ypc/ypc_family.png" width={500} height={500} alt={"Three generations of expertise"}/>
                 <div className="mb-5">For more than 50 years, three generations of the Plum family have 
                 provided the greater Yardsdale community with plumbing and HVAC services.</div>
-                <div>Charlio has nowhere near that level of expertise. Fifty years ago, most 
+                <div className="mb-5">Charlio has nowhere near that level of expertise. Fifty years ago, 
+                the Internet was limited to a handful of people in academia and most 
                 people would have been looking up plumbers in their local paper or in the 
                 phone book. Word of mouth is still important, but having a website is indispensable 
                 when people search for plumbers or other local businesses with Google or other similar 

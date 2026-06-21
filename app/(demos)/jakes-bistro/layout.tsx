@@ -50,7 +50,7 @@ export default function RootLayout({
             ]} bottomLoc={15} />
           </div>
           <div className="float-right mt-20 mr-10 md:hidden">
-            <NavMenu links = {[
+            <NavMenu hamburgerDarkSrc="/hamburger-menu.svg" links = {[
               { label: 'Locations', href: '/jakes-bistro/locations' },
               { label: 'Food + Drink', href: '/jakes-bistro/menus' },
               { label: 'Events', href: '/jakes-bistro/events' },

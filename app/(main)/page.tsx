@@ -9,9 +9,10 @@ export default function Home() {
       <div className="hero-div">
         <FillDiv/>
         <HeroText />
-        <Image className="hero-footer" src="/hero_border.png" width={1000} height={1000} alt="hero footer"/>
+        <Image className="hero-footer dark:invisible" src="/hero_border.png" width={1000} height={1000} alt="hero footer"/>
+        <Image className="hero-footer invisible dark:visible" src="/hero_border_dark.png" width={1000} height={1000} alt="hero footer"/>
       </div>      
-      <div className="main-content-div">
+      <div className="m-auto mb-20 min-h-[30dvh] w-[90%] md:w-120">
         <h1>Websites That Work as Hard as You Do</h1>
         <p>Charlio Webworks builds websites that get noticed and turn visitors into customers. We use the latest technology and 
           best practices to help your business stand out — whether you need a clean informational site or a full-featured 
