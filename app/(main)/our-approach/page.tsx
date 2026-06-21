@@ -12,6 +12,9 @@ export default function page(){
 
     return(
         <>
+            <div className='hor-gfx-mask'/>
+            <div className='vert-gfx-div'/>
+            <div className='hor-gfx-div'/>          
             <div className='page-content'>
                 <h1>Our Approach</h1>
                 <p>We believe in the power of collaboration. By checking in with our customers at each key stage of the process, we seek to deliver websites and solutions that exceed expectations.</p>

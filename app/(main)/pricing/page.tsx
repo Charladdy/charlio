@@ -3,7 +3,10 @@ import './page-styles.css'
 
 export default function page(){
     return(
-        <>    
+        <>
+            <div className='hor-gfx-mask'/>
+            <div className='vert-gfx-div'/>
+            <div className='hor-gfx-div'/>           
             <div className="page-content">
             <h1>Packages</h1>
             <p>Four packages designed to fit the needs of most businesses. To place a work order, request a quote, or to request additional information, 

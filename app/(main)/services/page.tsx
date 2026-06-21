@@ -2,7 +2,10 @@ import IconHeaderDiv from "@/components/IconHeaderDiv";
 
 export default function Page(){
     return(
-        <>
+    <>
+        <div className='hor-gfx-mask'/>
+        <div className='vert-gfx-div'/>
+        <div className='hor-gfx-div'/>  
         <div className="page-content">
             <p>From design and development to ecommerce and SEO, CharChar Webworks offers everything you need to build a powerful online presence. We handle the technical side so you can focus on running your business.</p>
             <IconHeaderDiv iconSrcStr="/icons/design.png" iconWidth={80} iconHeight={80} 

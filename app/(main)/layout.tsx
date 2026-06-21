@@ -40,10 +40,7 @@ export default function RootLayout({
           <Link href="/" className="navbar-logo-wrapper">
             <Image src="/charlio wordmark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
           </Link>
-        </div>
-        <div className='hor-gfx-mask'/>
-        <div className='vert-gfx-div'/>
-        <div className='hor-gfx-div'/>    
+        </div>  
         {children}
         <Footer />
         </body>
