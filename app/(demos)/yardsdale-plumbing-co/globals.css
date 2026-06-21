@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root{
+    --navbar-height: 200px;
+    --footer-height: 80px;
+
+    --pl-blue: #4a5fff;
+    --pl-red: #ff4a54;
+    --pl-charcoal: #242633;
+    --pl-slate: #5b5c66;
+}
+
+li{
+    font-size: 1.2em;
+    border-right: 2px solid black;
+    padding: 0 50px;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+br{
+    display: block;
+    content: "";
+    margin-top: 10px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    height: var(--navbar-height);
+    width: 100vw;
+    background: #fff;
+    border-bottom: 5px solid var(--pl-charcoal);
+    z-index: 4; 
+    box-shadow: 0px 8px 4px 5px rgba(0,0,0,0.4);
+}
+
+.page-content{
+    padding-top: calc(var(--navbar-height) + 50px);
+    padding-bottom: calc(var(--footer-height) + 15px);
+    width: 80%;
+    min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    max-width: 600px;
+    margin: auto;
+}
+
+.footer{
+    position: relative;
+    height: 80px;
+    left: 0;
+    width: 100vw;
+    padding: 20px 20px;
+    border-top: 25px var(--pl-slate);
+    background: var(--pl-charcoal);
+    color: #dfdfdf;
+}
+
+.hero-div{
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    min-height: 400px;
+    max-height: 650px;
+    margin-top: var(--navbar-height);
+    background: #fff;
+    border-bottom: 5px solid;
+    overflow: hidden;
+}
+
+.hero-logo{
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    width: 80%;
+    top: 30%;
+    height: auto;
+}
+
+.hero-pane{
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 30%;
+    background: rgba(245,245,250,0.6);
+}
+
+.hero-btn{
+    position: absolute;
+    width: 30%;
+    min-width: 200px;
+    max-width: 250px;
+    height: 60px;
+    right: 11%;
+    bottom: 25%;
+    color: #efefef;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+    padding-top: 10px;
+    background: linear-gradient(
+    160deg,
+    var(--pl-slate) 0%,
+    var(--pl-charcoal) 40%,
+    black 80%
+  );
+  border: 4px solid #cfcfcf;
+}
+.hero-button{
+    border: 1px solid white;
+    background: linear-gradient(
+    155deg,
+    #9b4fd0 0%,
+    var(--pl-red) 40%,
+    #3d1957 100%
+  );
+}
+
+.splash-photo{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    top: -30%;
+}
+
+.hamburger-btn:hover{
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: absolute;
+    background: white;
+    top: 0;
+    right: 0;
+    padding-top: calc(var(--navbar-height) + 15px);
+    padding-bottom: 50px; 
+    height: 80vh;
+    box-shadow: -5px 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.v-nav-menu-li{
+    width: 100%;
+    margin: 25px 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.v-nav-menu-li:hover{
+    background: #cfcfcf;
+}

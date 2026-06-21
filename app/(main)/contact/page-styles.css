@@ -1,0 +1,79 @@
+.contact-form{
+  width: 50vw;
+  height: fit-content;
+  background: #2b5e8c;
+  border-radius: 20px;
+  padding: 20px 20px 100px;
+  margin: auto;
+  box-shadow: 5px 12px 10px 8px rgba(0,0,0,0.3);
+}
+
+.contact-form-field{
+  width: 100%;
+  height: fit-content;
+  padding: 5px 0;
+}
+
+.contact-form-input{
+  background: #fff;
+  border: 2px solid;
+  margin-left: 15%;
+  padding: 2px 5px;
+}
+
+.contact-form-list{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 28px;
+  cursor: pointer;
+}
+
+.contact-form-list:hover{
+  cursor: pointer;
+}
+
+.contact-form-label{
+  color: #fff;
+  width: 100%;
+  margin-bottom: 5px;
+  font-weight: 500;
+  display: block;
+}
+
+.submit-btn{
+  position: relative;
+  background-image: url("@/public/btn-bg.png");
+  background-size: cover;
+  width: 80px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  float: right;
+  margin: 15px 50px;
+
+}
+
+.submit-btn:hover{
+  background-image: url("@/public/btn-bg-highlight.png");
+  background-size: 160% 160%;
+  border: 3px solid white;
+  box-shadow: 3px 4px 3px 3px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 650px) {
+  .contact-form{
+    width: 80%;
+  }
+
+  .contact-form-input{
+    max-width: 80%;
+  }
+}

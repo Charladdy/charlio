@@ -1,0 +1,31 @@
+.menu-img-holder{
+    position: relative;    
+    height: 25vh;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.menu-img{
+    margin-top: -12vw;
+}
+
+@media screen and (min-width: 1200){
+
+    .menu-img{
+    margin-top: -150px;
+}
+}
+
+@media screen and (max-height: 1000){
+    .menu-img-holder{
+        height: 15vh;
+        width: 75%;
+        max-width: 650px;
+    }
+    
+    .menu-img{
+        margin-top: -15%;
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="197.395" height="386.854" viewBox="0 0 197.395 386.854" preserveAspectRatio="none">
+  <g id="c" data-name="plumbing">
+    <g id="d" data-name="ducts mid">
+      <path d="M0,136.807h197.395" fill="none" stroke="#5b5c66" stroke-miterlimit="10" stroke-width="60"/>
+      <line x1="0" y1="336.854" x2="197.395" y2="336.854" fill="none" stroke="#6a6f99" stroke-miterlimit="10" stroke-width="100"/>
+      <path d="M0,204.615h197.395" fill="none" stroke="#6470cc" stroke-miterlimit="10" stroke-width="120"/>
+      <rect x="0" width="197.395" height="336.854" fill="none"/>
+    </g>
+  </g>
+</svg>

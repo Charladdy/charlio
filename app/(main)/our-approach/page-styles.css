@@ -1,0 +1,28 @@
+.animage{
+    animation:normal;
+    margin-right: 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    width: fit-content;
+    float: left;
+}
+
+.flow-description{
+    margin-bottom: 15px;
+}
+
+.lottie-left{
+    float: left;
+    margin-right: 15px;
+}
+
+.lottie-right{
+    float: right;
+    margin-left: 15px;
+}
+
+.description-div{
+    position: relative;
+    height: fit-content;
+    height: 210px;    
+}

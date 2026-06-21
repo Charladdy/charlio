@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root{
+    --navbar-ht: 200px;
+    --footer-ht: 150px;
+    --hunter-green: #006837;
+    --charcoal: #242633;
+    --slate: #5b5c66;
+    --silver: #dfdfdf;
+    --background: #0b0b0b;
+}
+
+body{
+    background: var(--background);
+    color: white;
+}
+
+a{
+    text-decoration: underline;
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+li{
+    font-family: "beloved-sans";
+    font-weight: 500;
+    color: black;
+    font-size: 1.2em;
+    border-right: 2px solid black;
+    padding: 0 50px;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li:hover{
+    font-weight: 600;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    height: var(--navbar-ht);
+    width: 100vw;
+    background: linear-gradient(
+        var(--silver) 0%,
+        var(--silver) 95%,
+        var(--slate) 97%,
+        var(--charcoal) 98%,
+        black 100%
+    );
+    z-index: 4; 
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.4);
+    color: var(--charcoal);
+}
+
+.page-content{
+    position: relative;
+    min-height: calc(100vh - var(--navbar-ht) - var(--footer-ht));
+    margin-top: var(--navbar-ht);
+    width: 100%;
+}
+
+.page-header{
+    font-family: "beloved-sans";
+    font-weight: 800;
+    font-size: 3em;
+    padding-top: 25px;
+}
+
+.title-header{
+    font-family: "beloved-sans";
+    font-weight: bold;
+}
+
+.footy{
+    position: relative;
+    height: var(--footer-ht);
+    background: var(--charcoal);
+    bottom: 0;
+    padding: 50px 25px;
+    z-index: 2;
+    border-top: 2px solid var(--hunter-green);
+    box-shadow: 0px -2px 1px rgba(0,0,0,0.4);
+}

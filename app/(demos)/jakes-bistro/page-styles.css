@@ -1,0 +1,141 @@
+:root{
+  --hero-txt-bg: rgba(0,0,0,0.4);
+}
+
+.hero-div {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  min-height: 300vh;
+}
+
+.splash-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-copy {
+  position: absolute;
+  top: 80px;
+  margin-left: 50px;
+  font-size: 4.5vw;
+  text-shadow: 4px 4px 2px black;
+  font-family: 'beloved-sans';
+  font-weight: bold;
+  z-index: 3;
+}
+
+.formula-div {
+  position: sticky;
+  top: var(--navbar-ht);
+  height: calc(100vh - var(--navbar-ht));
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ingredients-div {
+  position: sticky;
+  top: calc(var(--navbar-ht) + 5vh + 3.6em + 25px);
+  height: calc(100vh - var(--navbar-ht) - 5vh - 3.6em - 25px);
+  overflow: hidden;
+  padding-bottom: 250px;
+  z-index: 1;
+}
+
+.ingredients-img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  box-shadow: 3px -3px 2px 2px rgba(0,0,0,0.3);
+}
+
+.ingredients-copy {
+  position: absolute;
+  left: 5%;
+  bottom: 40vw;
+  font-size: 4em;
+  text-shadow: 4px 4px 2px black;
+  font-family: 'beloved-script';
+  font-weight: normal;
+}
+
+.cooking-div {
+  position: sticky;
+  top: var(--navbar-ht);
+  width: 35%;
+  height: calc(100vh - var(--navbar-ht));
+  margin-left: 65%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.cooking-img {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - var(--navbar-ht));
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  box-shadow:-3px -3px 2px 2px rgba(0,0,0,0.4);
+}
+
+.cooking-copy {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  left: 0;
+  right: 0;
+  font-size: 4em;
+  text-shadow: 4px 4px 2px black;
+  font-family: 'beloved-script';
+  font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+  .hero-copy{
+    background: var(--hero-txt-bg);
+    margin-left: 0;
+    padding: 2vh 5vw;
+    width: 65vw;
+    font-size: 6vw;
+  }
+
+  .ingredients-copy{
+    background: var(--hero-txt-bg);
+    font-size: 10vw;
+    left: 0;
+    padding: 2vh 5vw;
+    width: 65vw;
+    bottom: 30vw;
+  }
+
+  .cooking-copy{
+    background: var(--hero-txt-bg);
+    font-size: 8vw;
+    margin-right: 0;
+    padding: 2vh 5vw;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-div {
+        width: 1200px;
+    }
+
+    .hero-copy {
+        margin-left: 10%;
+        font-size: 3em;
+        }
+
+    .ingredients-copy {
+        bottom: 50vh;
+    }
+}
