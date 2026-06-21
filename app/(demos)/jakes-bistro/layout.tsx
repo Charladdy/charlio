@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import HorizontalNavMenu from "@/components/HorizontalNavMenu";
+import NavMenu from "@/components/NavMenu";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -41,11 +42,20 @@ export default function RootLayout({
           
           <div className="absolute left-1/2 -translate-x-1/2 top-2/5 -translate-y-1/2 flex h-10 justify-center items-center w-[340px]">
           </div>
-          <HorizontalNavMenu links={[
-            { label: 'Locations', href: '/jakes-bistro/locations' },
-            { label: 'Food + Drink', href: '/jakes-bistro/menus' },
-            { label: 'Events', href: '/jakes-bistro/events' },
-          ]} bottomLoc={15} />
+          <div className="invisible md:visible">
+            <HorizontalNavMenu links={[
+              { label: 'Locations', href: '/jakes-bistro/locations' },
+              { label: 'Food + Drink', href: '/jakes-bistro/menus' },
+              { label: 'Events', href: '/jakes-bistro/events' },
+            ]} bottomLoc={15} />
+          </div>
+          <div className="float-right mt-20 mr-10 md:hidden">
+            <NavMenu links = {[
+              { label: 'Locations', href: '/jakes-bistro/locations' },
+              { label: 'Food + Drink', href: '/jakes-bistro/menus' },
+              { label: 'Events', href: '/jakes-bistro/events' },
+            ]} />
+          </div>          
         </div>
         <div className="page-content">
           {children}

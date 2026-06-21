@@ -86,3 +86,30 @@ li:hover{
     border-top: 2px solid var(--hunter-green);
     box-shadow: 0px -2px 1px rgba(0,0,0,0.4);
 }
+
+.hamburger-btn:hover{
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: absolute;
+    background: white;
+    color: black;
+    top: 0;
+    right: 0;
+    padding-top: calc(var(--navbar-ht) + 15px);
+    padding-bottom: 50px; 
+    height: 80vh;
+    box-shadow: -5px 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.v-nav-menu-li{
+    width: 100%;
+    margin: 25px 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.v-nav-menu-li:hover{
+    background: #cfcfcf;
+}

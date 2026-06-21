@@ -320,6 +320,10 @@ p {
 
 @media screen and (max-width: 650px){
 
+  .hamburger-btn{
+    margin-left: -2vw;
+  }
+
   .page-content{
     width: 100%;
     padding: 5vh 8vw;
