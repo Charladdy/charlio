@@ -22,7 +22,7 @@ export default function Page(){
                         <div className="w-full mb-2 ml-2"><a href="/jakes-bistro/menus/main/lunch" target="_blank">Lunch</a></div>
                         <div className="w-full mb-2 ml-2"><a href="/jakes-bistro/menus/main/dinner" target="_blank">Dinner</a></div>
                         <div className="w-full mb-2 ml-2"><a href="/jakes-bistro/menus/drinks" target="_blank">Drinks</a></div>
-                        <div className="w-full mb-2 ml-2"><a href="/jakes-bistro/menus/downtown/brunch" target="_blank">Sunday Brunch</a></div>
+                        <div className="w-full mb-2 ml-2"><a href="/jakes-bistro/menus/main/brunch" target="_blank">Sunday Brunch</a></div>
                     </div>
                 </div>
                 <div className="flex-1 md:ml-10">
