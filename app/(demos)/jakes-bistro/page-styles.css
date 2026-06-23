@@ -41,7 +41,7 @@
 
 .ingredients-div {
   position: sticky;
-  top: calc(var(--navbar-ht) + 5vh + 3.6em + 25px);
+  top: calc(var(--navbar-ht) + 7.5vh + 3.6em + 25px);
   height: calc(100vh - var(--navbar-ht) - 5vh - 3.6em - 25px);
   overflow: hidden;
   padding-bottom: 250px;
@@ -96,6 +96,22 @@
   text-shadow: 4px 4px 2px black;
   font-family: 'beloved-script';
   font-weight: bold;
+}
+
+.copy-div {
+  position: sticky;
+  top: var(--navbar-ht);
+  background: var(--background);
+  width: 100%;
+  height: fit-content;
+  top: calc(var(--navbar-ht) + 50vh + 3.6em + 25px);  
+  min-height: calc(50vh - var(--navbar-ht) - var(--footer-ht));
+  z-index: 3;
+  padding:5%;
+  padding-top: 5vh;
+  box-shadow: 0px -3px 2px 2px rgba(0,0,0,0.4);
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 
 @media screen and (max-width: 750px) {
