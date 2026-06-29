@@ -4,7 +4,7 @@ export default function page(){
     return(
         <div className="page-content">
             <h1 className="text-3xl">Portfolio</h1>
-            <p>Browse some demo sites that showcase CharChar's capabilities, as well as some affiliated web applications that we have produced.</p>
+            <p>Browse some demo sites that showcase Charlio's capabilities, as well as some affiliated web applications that we have produced.</p>
             <h2 className="text-2xl mb-5">Demo Sites</h2>
             <div className="md:flex">
                 <div className="flex-1 pl-5 md:pr-5 md:pl-0  border-b md:border-r md:border-b-0">

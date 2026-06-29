@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /jakes-bistro
+Disallow: /yardsdale-plumbing-co
+
+Sitemap: https://charl.io/sitemap.xml

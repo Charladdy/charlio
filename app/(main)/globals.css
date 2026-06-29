@@ -287,6 +287,22 @@ p {
   );
 }
 
+.icon-card{
+  border-radius: 12px;
+  border: 3px solid var(--main-palette2);
+  outline: 9px solid var(--main-palette5);
+  outline-offset: 2px;
+  padding: 5px;
+  margin-bottom: 50px;
+  box-shadow: 14px 14px 3px 3px rgba(0,0,0, 0.5);
+}
+
+.icon-card:hover{
+  border-color: var(--main-palette1);
+  outline: 11px solid var(--main-palette4);
+  box-shadow: 15px 15px 3px 3px rgba(0,0,0, 0.75);
+}
+
 .footer-div{
   height: var(--footer-height);
   padding-top: 30px;
@@ -303,6 +319,10 @@ p {
 }
 
 @media screen and (max-width: 650px){
+
+  :root{
+    --footer-height: 120px;
+  }
 
   .navbar-logo-wrapper{    
     left: 25px;

@@ -22,7 +22,7 @@ export default function Page(){
                 our translation and ordering platform <a href="https://tradulio.com" target="_blank">Tradulio</a>. We can also integrate your site 
                 with other third party reservation services you use.</p>
                 <p className="m-auto w-[90%] md:w-sm mb-5">Please take a look around and if you would like for Jake to build a site for you please don't hesitate 
-                    to <a href="https:charlio.com/contact" target="_blank">reach out</a>.</p>
+                    to <a href="https:charl.io/contact" target="_blank">reach out</a>.</p>
             </div>
         </div>
     );

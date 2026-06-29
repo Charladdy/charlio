@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import NavMenu from "@/components/NavMenu";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import AnalyticsGate from "@/components/AnalyticsGate";
+import { CookieConsentProvider } from "@/components/CookieConsentContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,23 +31,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>
-        <div className="navbar">
-          <NavMenu links={[
-            { label: 'Our Approach', href: '/our-approach' },
-            { label: 'Our Services', href: '/services' },
-            { label: 'Portfolio', href: '/portfolio' },
-            { label: 'Pricing', href: '/pricing' },
-            { label: 'Contact Us', href: '/contact' },
-          ]} />
-          <Link href="/" className="navbar-logo-wrapper">
-            <Image className="dark:invisible" src="/charlio wordmark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
-            <Image className="invisible dark:visible" src="/charlio wordmark_dark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
-          </Link>
-        </div>  
-        {children}
-        <Footer />
-        </body>
+      <CookieConsentProvider>
+        <body>
+          <div className="navbar">
+            <NavMenu links={[
+              { label: 'Our Approach', href: '/our-approach' },
+              { label: 'Our Services', href: '/services' },
+              { label: 'Portfolio', href: '/portfolio' },
+              { label: 'Pricing', href: '/pricing' },
+              { label: 'Contact Us', href: '/contact' },
+            ]} />
+            <Link href="/" className="navbar-logo-wrapper">
+              <Image className="dark:invisible" src="/charlio wordmark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
+              <Image className="invisible dark:visible" src="/charlio wordmark_dark.svg" alt="Charlio Webworks" fill sizes="auto auto" loading='eager' style={{ objectFit: "contain"}} />
+            </Link>
+          </div>
+          {children}
+          <Footer />
+          <CookieBanner />
+          </body>
+          <AnalyticsGate gaId="G-KER22S4FPX" />
+      </CookieConsentProvider>
     </html>
   );
 }

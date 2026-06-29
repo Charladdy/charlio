@@ -18,7 +18,11 @@ export default function page(){
                 <a href="/contact" className="hero-btn">Get an estimate</a>
             </div>
             <div className="h-[50vh] m-auto py-15 min-h-80 w-md">
-                <div>Yardsdale Plumbing Company is your one-stop-shop for all of your 
+                <div>The people of Yardsdale, like Yardsdale itself, don't exist. But if they did, 
+                    they would probably need to hire the services of a reliable plumber at some point. 
+                    This demo page is an example of one that could be made by Charlio Webworks.
+                </div>
+                <div className="mt-5">Yardsdale Plumbing Company is your one-stop-shop for all of your 
                     plumbing and HVAC needs in the greater Yardsdale area. Our team of over 
                     30 professionals are available to provide repair and installation services 
                     with quick turnaround time.
