@@ -2,19 +2,31 @@
 
 import { useActionState } from 'react'
 import { submitContactForm, type ContactState } from '@/app/actions/contact'
+import type { Locale } from '@/lib/i18n/locales'
 
-interface ContactFormProps {
-  categories?: string[]
+interface ContactFormDict {
+  category: string
+  selectCategory: string
+  firstName: string
+  lastName: string
+  email: string
+  subject: string
+  message: string
+  sending: string
+  submit: string
 }
 
-const DEFAULT_CATEGORIES = ['Option1', 'Option2', 'Option3']
+interface ContactFormProps {
+  lang: Locale
+  dict: ContactFormDict
+  categories: string[]
+}
 
 const initialState: ContactState = { status: 'idle', message: '' }
 
-export default function ContactForm({
-  categories = DEFAULT_CATEGORIES,
-}: ContactFormProps) {
-  const [state, formAction, pending] = useActionState(submitContactForm, initialState)
+export default function ContactForm({ lang, dict, categories }: ContactFormProps) {
+  const boundAction = submitContactForm.bind(null, lang)
+  const [state, formAction, pending] = useActionState(boundAction, initialState)
 
   if (state.status === 'success') {
     return (
@@ -33,13 +45,13 @@ export default function ContactForm({
       )}
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="category">Category</label>
+        <label className="contact-form-label" htmlFor="category">{dict.category}</label>
         <select
           className="contact-form-input contact-form-list"
           id="category"
           name="category"
         >
-          <option value="">Select a category</option>
+          <option value="">{dict.selectCategory}</option>
           {categories.map(cat => (
             <option key={cat} value={cat}>{cat}</option>
           ))}
@@ -47,7 +59,7 @@ export default function ContactForm({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="firstname">First Name</label>
+        <label className="contact-form-label" htmlFor="firstname">{dict.firstName}</label>
         <input
           className="contact-form-input"
           id="firstname"
@@ -57,7 +69,7 @@ export default function ContactForm({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="lastname">Last Name</label>
+        <label className="contact-form-label" htmlFor="lastname">{dict.lastName}</label>
         <input
           className="contact-form-input"
           id="lastname"
@@ -68,7 +80,7 @@ export default function ContactForm({
 
       <div className="contact-form-field">
         <label className="contact-form-label" htmlFor="email">
-          Email <span aria-hidden="true">*</span>
+          {dict.email} <span aria-hidden="true">*</span>
         </label>
         <input
           className="contact-form-input"
@@ -80,7 +92,7 @@ export default function ContactForm({
       </div>
 
       <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="subject">Subject</label>
+        <label className="contact-form-label" htmlFor="subject">{dict.subject}</label>
         <input
           className="contact-form-input"
           id="subject"
@@ -91,7 +103,7 @@ export default function ContactForm({
 
       <div className="contact-form-field">
         <label className="contact-form-label" htmlFor="message">
-          Message <span aria-hidden="true">*</span>
+          {dict.message} <span aria-hidden="true">*</span>
         </label>
         <textarea
           className="contact-form-input w-80 h-30"
@@ -102,7 +114,7 @@ export default function ContactForm({
       </div>
 
       <button className="submit-btn" type="submit" disabled={pending}>
-        {pending ? 'Sending…' : 'Submit'}
+        {pending ? dict.sending : dict.submit}
       </button>
     </form>
   )

@@ -1,6 +1,8 @@
 'use server'
 
 import nodemailer from 'nodemailer'
+import { getDictionary } from '@/lib/i18n/getDictionary'
+import type { Locale } from '@/lib/i18n/locales'
 
 export type ContactState = {
   status: 'idle' | 'success' | 'error'
@@ -8,9 +10,12 @@ export type ContactState = {
 }
 
 export async function submitContactForm(
+  lang: Locale,
   _prevState: ContactState,
   formData: FormData
 ): Promise<ContactState> {
+  const dict = (await getDictionary(lang)).common.contactForm
+
   const email     = (formData.get('email')     as string | null)?.trim() ?? ''
   const firstname = (formData.get('firstname') as string | null)?.trim() ?? ''
   const lastname  = (formData.get('lastname')  as string | null)?.trim() ?? ''
@@ -21,13 +26,13 @@ export async function submitContactForm(
 
   // --- Validation --------------------------------------------------------
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return { status: 'error', message: 'A valid email address is required.' }
+    return { status: 'error', message: dict.validationEmail }
   }
   if (!subject) {
-    return { status: 'error', message: 'Subject is required.' }
+    return { status: 'error', message: dict.validationSubject }
   }
   if (!message) {
-    return { status: 'error', message: 'Message is required.' }
+    return { status: 'error', message: dict.validationMessage }
   }
 
   // --- Transport ---------------------------------------------------------
@@ -68,13 +73,13 @@ export async function submitContactForm(
     })
     return {
       status: 'success',
-      message: "Your message has been sent! We'll be in touch soon.",
+      message: dict.successMessage,
     }
   } catch (err) {
     console.error('[contact] mail error:', err)
     return {
       status: 'error',
-      message: 'Something went wrong sending your message. Please try again later.',
+      message: dict.errorMessage,
     }
   }
 }

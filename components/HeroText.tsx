@@ -1,13 +1,23 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import type { HeroWord } from '@/lib/i18n/locales'
 
-const WORDS = ['INSPIRES', 'TRANSFORMS', 'CAPTIVATES'] as const
 type Phase = 'idle' | 'exit' | 'enter'
 
 const PHASE_DURATIONS: Record<Phase, number> = { idle: 2500, exit: 500, enter: 500 }
 
-export default function HeroText() {
+interface HeroTextDict {
+  heroWords: readonly [HeroWord, HeroWord]
+  connector: string
+  cyclingWords: readonly string[]
+}
+
+interface HeroTextProps {
+  dict: HeroTextDict
+}
+
+export default function HeroText({ dict }: HeroTextProps) {
   const [wordIdx, setWordIdx] = useState(0)
   const [phase, setPhase] = useState<Phase>('idle')
 
@@ -16,25 +26,26 @@ export default function HeroText() {
       if (phase === 'idle') {
         setPhase('exit')
       } else if (phase === 'exit') {
-        setWordIdx(i => (i + 1) % WORDS.length)
+        setWordIdx(i => (i + 1) % dict.cyclingWords.length)
         setPhase('enter')
       } else {
         setPhase('idle')
       }
     }, PHASE_DURATIONS[phase])
     return () => clearTimeout(t)
-  }, [phase])
+  }, [phase, dict.cyclingWords.length])
 
   return (
     <div className="hero-text-wrapper">
       <div className="hero-text-left">
-        <span className="hero-web">WEB</span>
-        <span className="hero-presence">PRESENCE</span>
-        <span className="hero-that">that...</span>
+        {dict.heroWords.map((word, i) => (
+          <span key={i} className={word.emphasis === 'large' ? 'hero-web' : 'hero-presence'}>{word.text}</span>
+        ))}
+        <span className="hero-that">{dict.connector}</span>
       </div>
       <div className="hero-text-right">
         <span className={`hero-word hero-word--${phase}`}>
-          {WORDS[wordIdx]}
+          {dict.cyclingWords[wordIdx]}
         </span>
       </div>
     </div>

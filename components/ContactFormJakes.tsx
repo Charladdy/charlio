@@ -2,19 +2,35 @@
 
 import { useActionState } from 'react'
 import { submitContactForm, type ContactState } from '@/app/actions/jakes-contact'
+import type { Locale } from '@/lib/i18n/locales'
 
-interface ContactFormProps {
-  categories?: string[]
+interface ContactFormDict {
+  firstName: string
+  lastName: string
+  email: string
+  sending: string
+  submit: string
 }
 
-const DEFAULT_CATEGORIES = ['Option1', 'Option2', 'Option3']
+interface JakesContactFormDict {
+  preferredDate: string
+  numberOfGuests: string
+  typeOfEvent: string
+  yourMessage: string
+}
+
+interface ContactFormJakesProps {
+  lang: Locale
+  dict: ContactFormDict
+  jakesDict: JakesContactFormDict
+  categories: string[]
+}
 
 const initialState: ContactState = { status: 'idle', message: '' }
 
-export default function ContactFormJakes({
-  categories = DEFAULT_CATEGORIES,
-}: ContactFormProps) {
-  const [state, formAction, pending] = useActionState(submitContactForm, initialState)
+export default function ContactFormJakes({ lang, dict, jakesDict, categories }: ContactFormJakesProps) {
+  const boundAction = submitContactForm.bind(null, lang)
+  const [state, formAction, pending] = useActionState(boundAction, initialState)
 
   if (state.status === 'success') {
     return (
@@ -33,7 +49,7 @@ export default function ContactFormJakes({
       )}
 
       <div className="contact-form-field">
-        <div className="contact-form-label"><label htmlFor="date">Preferred Date:</label></div>
+        <div className="contact-form-label"><label htmlFor="date">{jakesDict.preferredDate}</label></div>
         <input
           className="contact-form-input"
           id="date"
@@ -43,13 +59,13 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <div  className="contact-form-label"><label htmlFor="category">Number of guests</label></div>
+        <div  className="contact-form-label"><label htmlFor="category">{jakesDict.numberOfGuests}</label></div>
         <select
           className="contact-form-input contact-form-list"
           id="category"
           name="category"
         >
-          <option value="">Number of guests</option>
+          <option value="">{jakesDict.numberOfGuests}</option>
           {categories.map(cat => (
             <option key={cat} value={cat}>{cat}</option>
           ))}
@@ -57,7 +73,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <div  className="contact-form-label"><label htmlFor="firstname">First Name</label></div>
+        <div  className="contact-form-label"><label htmlFor="firstname">{dict.firstName}</label></div>
         <input
           className="contact-form-input"
           id="firstname"
@@ -67,7 +83,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <div  className="contact-form-label"><label htmlFor="lastname">Last Name</label></div>
+        <div  className="contact-form-label"><label htmlFor="lastname">{dict.lastName}</label></div>
         <input
           className="contact-form-input"
           id="lastname"
@@ -78,7 +94,7 @@ export default function ContactFormJakes({
 
       <div className="contact-form-field">
         <div  className="contact-form-label"><label htmlFor="email">
-          Email <span aria-hidden="true">*</span>
+          {dict.email} <span aria-hidden="true">*</span>
         </label></div>
         <input
           className="contact-form-input"
@@ -90,7 +106,7 @@ export default function ContactFormJakes({
       </div>
 
       <div className="contact-form-field">
-        <div  className="contact-form-label"><label htmlFor="subject">Type of Event</label></div>
+        <div  className="contact-form-label"><label htmlFor="subject">{jakesDict.typeOfEvent}</label></div>
         <input
           className="contact-form-input"
           id="subject"
@@ -101,7 +117,7 @@ export default function ContactFormJakes({
 
       <div className="contact-form-field h-30">
         <div  className="contact-form-label"><label htmlFor="message">
-          Your Message <span aria-hidden="true">*</span>
+          {jakesDict.yourMessage} <span aria-hidden="true">*</span>
         </label></div>
         <textarea
           className="contact-form-input w-[50vw] md:w-80 h-30"
@@ -113,7 +129,7 @@ export default function ContactFormJakes({
       </div>
 
       <button className="submit-btn" type="submit" disabled={pending}>
-        {pending ? 'Sending…' : 'Submit'}
+        {pending ? dict.sending : dict.submit}
       </button>
     </form>
   )
