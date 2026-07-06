@@ -2,6 +2,7 @@ import IconHeaderDiv from "@/components/IconHeaderDiv";
 import type {Metadata} from 'next'
 import { resolveLangParam } from '@/lib/i18n/locales'
 import { getDictionary } from '@/lib/i18n/getDictionary'
+import { pageOpenGraph } from '@/lib/seo'
 
 const ICONS = [
     { src: '/icons/design.svg', darkSrc: '/icons/design_dark.svg' },
@@ -16,7 +17,7 @@ const ICONS = [
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const lang = await resolveLangParam(params);
     const dict = await getDictionary(lang);
-    return { title: dict.main.services.title };
+    return { title: dict.main.services.title, openGraph: pageOpenGraph(lang, '/services') };
 }
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }){

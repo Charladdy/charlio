@@ -3,8 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import CookieBanner from "@/components/CookieBanner";
 import AnalyticsGate from "@/components/AnalyticsGate";
 import { CookieConsentProvider } from "@/components/CookieConsentContext";
-import { locales, resolveLangParam } from "@/lib/i18n/locales";
+import { locales, resolveLangParam, type Locale } from "@/lib/i18n/locales";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { SITE_URL, siteOpenGraph } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +21,22 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export const metadata: Metadata = {
-  title: "Charlio Webworks",
-  description: "Modern sites for small business",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const lang: Locale = await resolveLangParam(params);
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: "Charlio Webworks",
+    description: "Modern sites for small business",
+    openGraph: siteOpenGraph(lang),
+    other: process.env.NEXT_PUBLIC_FB_APP_ID
+      ? { "fb:app_id": process.env.NEXT_PUBLIC_FB_APP_ID }
+      : undefined,
+  };
+}
 
 export const dynamicParams = false;
 

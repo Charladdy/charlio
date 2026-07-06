@@ -3,6 +3,7 @@ import './page-styles.css'
 import type {Metadata} from 'next'
 import { resolveLangParam } from '@/lib/i18n/locales'
 import { getDictionary } from '@/lib/i18n/getDictionary'
+import { pageOpenGraph } from '@/lib/seo'
 
 const CHECK = '✔';
 
@@ -11,7 +12,7 @@ const PRICES = ['$300', '$400', '$750', '$950'];
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const lang = await resolveLangParam(params);
     const dict = await getDictionary(lang);
-    return { title: dict.main.pricing.metaTitle };
+    return { title: dict.main.pricing.metaTitle, openGraph: pageOpenGraph(lang, '/pricing') };
 }
 
 export default async function page({ params }: { params: Promise<{ lang: string }> }){

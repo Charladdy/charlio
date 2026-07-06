@@ -5,6 +5,7 @@ import NavMenu from "@/components/NavMenu";
 import Footer from "@/components/Footer";
 import { resolveLangParam } from "@/lib/i18n/locales";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { pageOpenGraph } from "@/lib/seo";
 import "./globals.css";
 
 export async function generateMetadata({
@@ -17,6 +18,7 @@ export async function generateMetadata({
   return {
     title: dict.main.meta.title,
     description: dict.main.meta.description,
+    openGraph: pageOpenGraph(lang, ''),
   };
 }
 

@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 import CookiePreferencesPanel from '@/components/CookiePreferencesPanel'
 import { resolveLangParam } from '@/lib/i18n/locales'
 import { getDictionary } from '@/lib/i18n/getDictionary'
+import { pageOpenGraph } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const lang = await resolveLangParam(params);
   const dict = await getDictionary(lang);
-  return { title: dict.main.cookies.metaTitle };
+  return { title: dict.main.cookies.metaTitle, openGraph: pageOpenGraph(lang, '/cookies') };
 }
 
 export default async function CookiesPage({ params }: { params: Promise<{ lang: string }> }) {
