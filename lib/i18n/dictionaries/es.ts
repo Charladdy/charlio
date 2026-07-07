@@ -201,11 +201,11 @@ const dictionary = {
     },
     home: {
       splashAlt: 'Imagen destacada de Jakes Bistro',
-      heroHeading: 'Una Fórmula Probada por el Tiempo',
+      heroHeading: 'Una Fórmula Probada',
       ingredientsAlt: 'Ingredientes frescos',
       ingredientsCaption: 'Ingredientes frescos',
       cookingAlt: 'Filete a la plancha',
-      cookingCaption: 'Hecho como debe ser',
+      cookingCaption: 'Bien hechos',
       para1: "Puede que Jake's Bistro no sea un restaurante real. Puede que ninguna de sus ubicaciones exista en realidad. Pero, ¿sabes quién sí existe? Jake, el creador de Charlio. Jake es una persona real que puede construir sitios web reales para tu restaurante u otro negocio pequeño.",
       para2Pre: 'Este sitio de demostración utiliza un sencillo formulario de contacto para consultas de eventos, así como menús potenciados por nuestra plataforma de traducción y pedidos ',
       tradulioLink: 'Tradulio',
