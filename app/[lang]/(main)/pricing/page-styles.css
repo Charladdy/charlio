@@ -1,6 +1,11 @@
-.package-grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+.package-bg{
+    position: absolute;
+    height: 100%;
+    width: 150vw;
+    left: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: -1;
     background: linear-gradient(
         155deg,
         #9b4fd0 0%,
@@ -9,8 +14,13 @@
         var(--main-palette5) 75%,
         #3d1957 100%
     );
-    border-radius: 15px;
     box-shadow: 5px 8px 6px 4px rgba(0,0,0,0.4);
+}
+
+.package-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;    
     padding: 15px;
     margin: 25px;
 }
@@ -42,13 +52,16 @@
 
 @media screen and (max-width: 650px){
     .package-grid{
+        position: relative;
         width: 98vw;
-        margin: 20px -6vw;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        padding-inline: 1vw;
+        margin: 20px 0;
+        left: -8vw;
+        right: 0;        
+        padding-inline:0;
     }
 
     .grid-box{
+        text-align: center;
         font-size: auto;
         font-size: 0.8em;
         overflow: hidden;        

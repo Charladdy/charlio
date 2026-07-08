@@ -21,7 +21,7 @@ export default async function page({ params }: { params: Promise<{ lang: string 
     const t = dict.main.pricing;
 
     const rows = [
-        { label: t.rowLabels.pageCount, values: ['4', '6', '8', '12'] },
+        { label: t.rowLabels.pageCount, values: ['4 pages', '6', '8', '12'] },
         { label: t.rowLabels.websiteMockup, values: [CHECK, CHECK, CHECK, CHECK] },
         { label: t.rowLabels.contactForm, values: [CHECK, CHECK, CHECK, CHECK] },
         { label: t.rowLabels.hostingSetup, values: [CHECK, CHECK, CHECK, CHECK] },
@@ -41,18 +41,20 @@ export default async function page({ params }: { params: Promise<{ lang: string 
             <p>{t.introPre}<a className="copy-link" href={`/${lang}/contact`}>{t.introLinkText}</a>{t.introPost}
             </p>
             <p style={{fontStyle:'italic'}}>{t.disclaimer}</p>
-            <div className="package-grid">
+            <div className="package-grid hidden md:visible">
+                <div className="package-bg"/>
                 <div/>
-                {t.packageNames.map(name => <h2 key={name} className="grid-box">{name}</h2>)}
-                <h2 className="grid-box">{t.priceHeading}</h2>
-                {PRICES.map((p, i) => <h2 key={i} className="grid-box">{p}</h2>)}
+                {t.packageNames.map(name => <h2 key={name} className="grid-box font-bold text-lg">{name}</h2>)}
+                <h2 className="grid-box font-bold">{t.priceHeading}</h2>
+                {PRICES.map((p, i) => <h2 key={i} className="grid-box font-bold text-lg">{p}</h2>)}
                 {rows.map(row => (
                     <Fragment key={row.label}>
-                        <h2 className="grid-box">{row.label}</h2>
+                        <h2 className="grid-box font-bold">{row.label}</h2>
                         {row.values.map((v, i) => <h2 key={i} className="grid-box">{v}</h2>)}
                     </Fragment>
                 ))}
             </div>
+
 
             <h1>{t.alaCarte.heading}</h1>
             <div className="alacarte-grid">

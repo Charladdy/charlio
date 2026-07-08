@@ -22,6 +22,7 @@
 
 .contact-form-input{
   background: #fff;
+  color: #030303;
   border: 2px solid;
   margin-left: 15%;
   padding: 2px 5px;
@@ -63,7 +64,6 @@
   font-weight: 600;
   float: right;
   margin: 15px 50px;
-
 }
 
 .submit-btn:hover{
