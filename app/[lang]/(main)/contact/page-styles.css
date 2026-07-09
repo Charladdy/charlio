@@ -1,5 +1,6 @@
 .contact-form{
-  width: 50vw;
+  width: 100%;
+  max-width: 600px;
   height: fit-content;
   background: linear-gradient(
       155deg,
@@ -26,6 +27,14 @@
   border: 2px solid;
   margin-left: 15%;
   padding: 2px 5px;
+}
+
+.contact-form-input:user-valid{
+  border-color: #04ae54;
+}
+
+.contact-form-input:user-invalid{
+  border-color: #b42400;
 }
 
 .contact-form-list{

@@ -29,7 +29,7 @@ export default function Footer({ lang, dict, switcherDict, wrapperClassName = 'f
     return(
             <div className={wrapperClassName}>
                 <p className="footer-copyright">{dict.copyrightTemplate.replace('{year}', String(new Date().getFullYear()))}</p>
-                <div className="absolute flex right w-[80%] md:w-[50%] right-5 bottom-4 md:top-8 md:bottom-auto">
+                <div className="footer-links absolute flex right w-[80%] md:w-[50%] right-5 bottom-4 items-center">
                     <div className="text-white underline border-r hover:font-semibold flex-1 text-center"><a href={`/${lang}/cookies`} target="_blank">{dict.cookies}</a></div>
                     <div className="text-white underline border-r hover:font-semibold flex-1 text-center"><a href="https://charladdy.com/tos" target="_blank">{dict.termsOfService}</a></div>
                     <div className="text-white underline border-r hover:font-semibold flex-1 text-center"><a href="https://charladdy.com/privacy" target="_blank">{dict.privacy}</a></div>

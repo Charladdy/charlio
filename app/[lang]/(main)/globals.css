@@ -67,7 +67,7 @@ p {
   z-index: 3;
   top:0;
   position: fixed;
-  box-shadow: 0 12px 20px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 20px 3px rgba(120,120,120,0.15);
   background: var(--background);
   display: flex;
   align-items: center;
@@ -309,7 +309,7 @@ p {
   position: relative;
   bottom: 0;
   background: #252525;
-  box-shadow: 0 -6px 6px 3px rgba(0,0,0, 0.25);
+  box-shadow: 0 -3px 2px 3px rgba(80,80,80, 0.25);
   z-index: 3;
 }
 
@@ -318,11 +318,18 @@ p {
   margin-left: 50px;
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 950px){
 
   :root{
-    --footer-height: 120px;
+    --footer-height: 200px;
   }
+
+  .footer-links{
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 650px){
 
   .navbar-logo-wrapper{    
     left: 25px;

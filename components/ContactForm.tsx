@@ -43,7 +43,6 @@ export default function ContactForm({ lang, dict, categories }: ContactFormProps
           {state.message}
         </p>
       )}
-
       <div className="contact-form-field">
         <label className="contact-form-label" htmlFor="category">{dict.category}</label>
         <select
@@ -58,24 +57,27 @@ export default function ContactForm({ lang, dict, categories }: ContactFormProps
         </select>
       </div>
 
-      <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="firstname">{dict.firstName}</label>
-        <input
-          className="contact-form-input"
-          id="firstname"
-          name="firstname"
-          type="text"
-        />
-      </div>
+      <div className="md:flex">
+        <div className="contact-form-field">
+          <label className="contact-form-label" htmlFor="firstname">{dict.firstName}</label>
+          <input
+            className="contact-form-input"
+            id="firstname"
+            name="firstname"
+            type="text"
+          />
+        </div>
 
-      <div className="contact-form-field">
-        <label className="contact-form-label" htmlFor="lastname">{dict.lastName}</label>
-        <input
-          className="contact-form-input"
-          id="lastname"
-          name="lastname"
-          type="text"
-        />
+        <div className="contact-form-field">
+          <label className="contact-form-label" htmlFor="lastname">{dict.lastName}</label>
+          <input
+            className="contact-form-input"
+            id="lastname"
+            name="lastname"
+            type="text"
+          />
+        </div>
+
       </div>
 
       <div className="contact-form-field">
@@ -94,7 +96,7 @@ export default function ContactForm({ lang, dict, categories }: ContactFormProps
       <div className="contact-form-field">
         <label className="contact-form-label" htmlFor="subject">{dict.subject}</label>
         <input
-          className="contact-form-input"
+          className="contact-form-input md:w-[60%]"
           id="subject"
           name="subject"
           type="text"
@@ -106,7 +108,7 @@ export default function ContactForm({ lang, dict, categories }: ContactFormProps
           {dict.message} <span aria-hidden="true">*</span>
         </label>
         <textarea
-          className="contact-form-input w-80 h-30"
+          className="contact-form-input w-[80%] h-30"
           id="message"
           name="message"
           required
