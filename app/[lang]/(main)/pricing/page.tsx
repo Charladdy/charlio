@@ -20,16 +20,6 @@ export default async function page({ params }: { params: Promise<{ lang: string 
     const dict = await getDictionary(lang);
     const t = dict.main.pricing;
 
-    const rows = [
-        { label: t.rowLabels.pageCount, values: ['4 pages', '6', '8', '12'] },
-        { label: t.rowLabels.websiteMockup, values: [CHECK, CHECK, CHECK, CHECK] },
-        { label: t.rowLabels.contactForm, values: [CHECK, CHECK, CHECK, CHECK] },
-        { label: t.rowLabels.hostingSetup, values: [CHECK, CHECK, CHECK, CHECK] },
-        { label: t.rowLabels.cmsSetup, values: ['', CHECK, CHECK, CHECK] },
-        { label: t.rowLabels.googleAnalyticsSetup, values: ['', CHECK, CHECK, CHECK] },
-        { label: t.rowLabels.ecommercePlatformSetup, values: ['', '', CHECK, CHECK] },
-        { label: t.rowLabels.userAuthSetup, values: ['', '', '', CHECK] },
-    ];
 
     return(
         <>
@@ -41,18 +31,35 @@ export default async function page({ params }: { params: Promise<{ lang: string 
             <p>{t.introPre}<a className="copy-link" href={`/${lang}/contact`}>{t.introLinkText}</a>{t.introPost}
             </p>
             <p style={{fontStyle:'italic'}}>{t.disclaimer}</p>
-            <div className="package-grid hidden md:visible">
+            <div className="flex grid grid-cols-2 lg:grid-cols-4 relative h-auto">
                 <div className="package-bg"/>
-                <div/>
-                {t.packageNames.map(name => <h2 key={name} className="grid-box font-bold text-lg">{name}</h2>)}
-                <h2 className="grid-box font-bold">{t.priceHeading}</h2>
-                {PRICES.map((p, i) => <h2 key={i} className="grid-box font-bold text-lg">{p}</h2>)}
-                {rows.map(row => (
-                    <Fragment key={row.label}>
-                        <h2 className="grid-box font-bold">{row.label}</h2>
-                        {row.values.map((v, i) => <h2 key={i} className="grid-box">{v}</h2>)}
-                    </Fragment>
-                ))}
+                <div className="package-box flex-1 mx-2 my-4">
+                    <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[0]}</div>
+                    <div className="font-bold text-xl border-b text-center py-2">$300</div>
+                    <div className="py-1 px-[10%]">4 {t.packages.pages}</div>
+                    <div className="py-1 px-[10%]">{t.packages.websiteMockup}</div>
+                    <div className="py-1 px-[10%]">{t.packages.contactForm}</div>
+                    <div className="py-1 px-[10%]">{t.packages.hostingSetup}</div>
+                </div>
+                <div className="package-box flex-1 mx-2 my-4">
+                    <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[1]}</div>
+                    <div className="font-bold text-xl border-b text-center py-2">$400</div>
+                    <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[0]}</div>
+                    <div className="py-1 px-[10%]">{t.packages.cmsSetup}</div>
+                    <div className="py-1 px-[10%]">{t.packages.googleAnalyticsSetup}</div>
+                </div>
+                <div className="package-box flex-1 mx-2 my-4">
+                    <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[2]}</div>
+                    <div className="font-bold text-xl border-b text-center py-2">$750</div>
+                    <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[1]}</div>
+                    <div className="py-1 px-[10%]">{t.packages.ecommercePlatformSetup}</div>                    
+                </div>
+                <div className="package-box flex-1 mx-2 my-4">
+                    <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[3]}</div>
+                    <div className="font-bold text-xl border-b text-center py-2">$950</div>
+                    <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[2]}</div>
+                    <div className="py-1 px-[10%]">{t.packages.userAuthSetup}</div>                    
+                </div>
             </div>
 
 

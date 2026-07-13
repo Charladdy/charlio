@@ -147,8 +147,9 @@ const dictionary = {
       disclaimer: 'All prices in USD. International customers will be billed the equivalent in their local currency via Wise Quick Pay.',
       packageNames: ['Basic', 'Basic Plus', 'Ecommerce', 'Ecommerce Plus'],
       priceHeading: 'Price',
-      rowLabels: {
-        pageCount: 'Page Count',
+      packages: {
+        pages: 'pages',
+        everythingIn: 'Everything in',
         websiteMockup: 'Website Mockup',
         contactForm: 'Contact Form',
         hostingSetup: 'Hosting Setup',
