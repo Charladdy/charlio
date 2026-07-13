@@ -31,7 +31,7 @@ export default async function page({ params }: { params: Promise<{ lang: string 
             <p>{t.introPre}<a className="copy-link" href={`/${lang}/contact`}>{t.introLinkText}</a>{t.introPost}
             </p>
             <p style={{fontStyle:'italic'}}>{t.disclaimer}</p>
-            <div className="flex grid grid-cols-2 lg:grid-cols-4 relative h-auto">
+            <div className="flex grid grid-cols-2 lg:grid-cols-4 relative h-auto font-semibold ">
                 <div className="package-bg"/>
                 <div className="package-box flex-1 mx-2 my-4">
                     <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[0]}</div>
@@ -44,6 +44,7 @@ export default async function page({ params }: { params: Promise<{ lang: string 
                 <div className="package-box flex-1 mx-2 my-4">
                     <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[1]}</div>
                     <div className="font-bold text-xl border-b text-center py-2">$400</div>
+                    <div className="py-1 px-[10%]">6 {t.packages.pages}</div>
                     <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[0]}</div>
                     <div className="py-1 px-[10%]">{t.packages.cmsSetup}</div>
                     <div className="py-1 px-[10%]">{t.packages.googleAnalyticsSetup}</div>
@@ -51,12 +52,14 @@ export default async function page({ params }: { params: Promise<{ lang: string 
                 <div className="package-box flex-1 mx-2 my-4">
                     <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[2]}</div>
                     <div className="font-bold text-xl border-b text-center py-2">$750</div>
+                    <div className="py-1 px-[10%]">8 {t.packages.pages}</div>
                     <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[1]}</div>
                     <div className="py-1 px-[10%]">{t.packages.ecommercePlatformSetup}</div>                    
                 </div>
                 <div className="package-box flex-1 mx-2 my-4">
                     <div className="font-bold text-2xl border-b text-center py-2">{t.packageNames[3]}</div>
                     <div className="font-bold text-xl border-b text-center py-2">$950</div>
+                    <div className="py-1 px-[10%]">12 {t.packages.pages}</div>
                     <div className="italic py-1 px-[10%]">{t.packages.everythingIn} {t.packageNames[2]}</div>
                     <div className="py-1 px-[10%]">{t.packages.userAuthSetup}</div>                    
                 </div>
