@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root{
+    --navbar-ht: 120px;
+    --footer-ht: 250px;
+    --burgundy: #7e2b4c;
+    --rose: #ec5a7e;
+    --blush: #f6dce1;
+    --cream: #fbf5ef;
+    --green: #8fbfa3;
+    --plum: #33192a;
+    --grey: #6f6f6f;
+}
+
+body{
+    background: var(--cream);
+    color: var(--grey);
+}
+
+.footy{
+    position: relative;
+    background: var(--plum);
+    left: 0;
+    right: 0;
+    height: var(--footer-ht);    
+    padding: 25px;
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    height: var(--navbar-ht);
+    width: 100vw;
+    z-index: 4; 
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.4);
+    background: var(--blush);
+    color: black;
+}
+
+.nav-menu{
+    position: fixed;
+    right: 0;
+    top: var(--navbar-ht);
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.4);
+    padding: 20px 0px;
+    background: var(--cream);
+}
+
+.v-nav-menu-li{
+    margin-bottom: 10px;
+    padding: 10px 50px;
+    color: var(--burgundy);
+    font-weight: 700;
+    font-family: 'Inter-Variable';
+}
+
+.v-nav-menu-li:hover{
+    background: #6f6f6f22;
+}
+
+.page-content{
+    position: relative;
+    min-height: calc(100vh - var(--navbar-ht) - var(--footer-ht));
+    margin: auto;
+    margin-top: var(--navbar-ht);
+    width: 100%;
+    max-width: 1000px;
+    font-family: "inter-variable";
+}
+
+.footer-links{
+    width: 80%;
+    bottom: 50px;
+}
+
+.footer-link{
+    width: fit-content;
+    padding: 5px;
+}
+
+.footer-copyright{
+    top: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: var(--plum);
+    color: var(--cream);
+  }
+
+  body{
+    background: var(--plum);
+    color: var(--cream);
+    }
+}

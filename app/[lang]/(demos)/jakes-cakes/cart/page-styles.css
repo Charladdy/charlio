@@ -1,0 +1,9 @@
+.cart-row:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 650px) {
+  .cart-row {
+    flex-wrap: wrap;
+  }
+}

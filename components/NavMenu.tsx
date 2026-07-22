@@ -26,12 +26,12 @@ export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.svg', h
   return (
     <>
       <button
-        className="hamburger-btn"
+        className="hamburger-btn hover:cursor-pointer"
         onClick={() => setOpen(o => !o)}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
       >
-        <Image className="dark:invisible" src={hamburgerSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
+        <Image className="dark:hidden" src={hamburgerSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
         <Image className="invisible dark:visible" src={hamburgerDarkSrc} alt="" width={25} height={20} style={{ height: 'auto', width: 'auto' }} />
       </button>
 

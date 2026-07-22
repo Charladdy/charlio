@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="1240.514" height="278.798" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1240.514 278.798">
+  <defs>
+    <clipPath id="e">
+      <rect width="1240.514" height="278.798" fill="none"/>
+    </clipPath>
+    <filter id="f" data-name="drop-shadow-1" x="-15.5" y="-.142" width="1272" height="289" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dx="0" dy="-5"/>
+      <feGaussianBlur result="g" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="g" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g id="d" data-name="hero-border-bottom">
+      <g clip-path="url(#e)">
+        <g filter="url(#f)">
+          <path d="M1240.514,278.798H0V20.615s287.995,224.116,732.981,217.936c366.606-5.092,507.533-217.936,507.533-217.936v258.183Z" fill="#33192a"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

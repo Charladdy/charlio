@@ -82,6 +82,7 @@ const dictionary = {
       body2Mid: ' or browse our ',
       pricingLink: 'packages and pricing',
       body2Post: '.',
+      introUrl: '/video/intro_en.mp4',
     },
     ourApproach: {
       title: 'Our Approach',

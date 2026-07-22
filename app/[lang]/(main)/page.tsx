@@ -18,6 +18,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Image className="hero-footer dark:invisible" src="/hero_border.png" width={1000} height={1000} alt="hero footer"/>
         <Image className="hero-footer invisible dark:visible" src="/hero_border_dark.png" width={1000} height={1000} alt="hero footer"/>
       </div>
+      <div className="relative m-auto mb-10 w-[100%] sm:w-150 h-fit bg-black">
+        <video controls width="100%" height="auto" autoPlay muted playsInline>
+          <source src={`/video/intro_${lang}.mp4`} type="video/mp4" />
+        </video>
+      </div>
       <div className="m-auto min-h-[30dvh] w-[90%] md:w-120">
         <h1>{t.heading1}</h1>
         <p><Image className="block float-left w-[45%] mr-5" src="/responsive_desktop.svg" height={100} width={100} alt="Responsive desktop" />

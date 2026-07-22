@@ -108,7 +108,7 @@ export default function ContactForm({ lang, dict, categories }: ContactFormProps
           {dict.message} <span aria-hidden="true">*</span>
         </label>
         <textarea
-          className="contact-form-input w-[80%] h-30"
+          className="contact-form-input contact-message md:w-[60%] w-[80%] h-30"
           id="message"
           name="message"
           required

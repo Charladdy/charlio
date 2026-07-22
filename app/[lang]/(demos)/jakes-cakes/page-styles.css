@@ -1,0 +1,56 @@
+:root{
+  --hero-txt-bg: rgba(0,0,0,0.4);
+}
+
+.hero-div {
+  position: relative;
+  top: calc(var(--navbar-ht) * -1.5);
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: fit-content;
+}
+
+.splash-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-copy {
+  position: absolute;
+  top: 80px;
+  margin-left: 50px;
+  font-size: 4.5vw;
+  text-shadow: 4px 4px 2px black;
+  font-family: 'beloved-sans';
+  font-weight: bold;
+  z-index: 3;
+}
+
+.divider-div{
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  /*background-image: url('/jakes-cakes/home-divider.svg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  aspect-ratio: 1374.01 / 1394.413;
+}
+
+@media screen and (max-width: 1000px){
+    .hero-div{
+        top: calc(20vw * -0.9);
+    }
+}
+
+@media screen and (max-width: 720px){
+    .hero-div{
+        top: var(--navbar-ht);
+    }
+}

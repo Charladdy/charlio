@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="79.647" height="79.858" viewBox="0 0 79.647 79.858">
+  <g id="c" data-name="Layer 1">
+    <g id="d" data-name="cart">
+      <path d="M.396,4.984c18.147,1.441,16.017,8.919,15.873,46.816h55.742l2.306-36.008H17.831" fill="none" stroke="#33192a" stroke-miterlimit="10" stroke-width="10"/>
+      <circle cx="65.671" cy="70.535" r="4.323" fill="none" stroke="#33192a" stroke-miterlimit="10" stroke-width="10"/>
+      <circle cx="24.238" cy="70.535" r="4.323" fill="none" stroke="#33192a" stroke-miterlimit="10" stroke-width="10"/>
+      <polyline points="71.434 61.331 14.949 61.331 21.866 51.8" fill="none" stroke="#33192a" stroke-miterlimit="10" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

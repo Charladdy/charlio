@@ -14,6 +14,7 @@ const pages: Array<{
   { path: '/portfolio', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/jakes-cakes', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
 ];
 

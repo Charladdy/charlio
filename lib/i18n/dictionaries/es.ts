@@ -82,6 +82,7 @@ const dictionary = {
       body2Mid: ' o consulta nuestros ',
       pricingLink: 'paquetes y precios',
       body2Post: '.',
+      introUrl: '/video/intro_es.mp4',
     },
     ourApproach: {
       title: 'Nuestro Enfoque',
