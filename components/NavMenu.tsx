@@ -18,13 +18,13 @@ interface NavMenuProps {
 export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.svg', hamburgerDarkSrc = '/hamburger-menu_dark.svg' }: NavMenuProps) {
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     setMounted(true)
     
     function handleOutsideClick(event: MouseEvent){
-          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
           setOpen(false);
       }
     }
