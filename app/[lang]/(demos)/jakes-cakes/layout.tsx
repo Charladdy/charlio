@@ -17,8 +17,8 @@ export async function generateMetadata({
   const lang = await resolveLangParam(params);
   const dict = await getDictionary(lang);
   return {
-    title: "Jake's Cakes",
-    description: "Jake's takes the cake!",
+    title: dict.jakesCakes.meta.title,
+    description: dict.jakesCakes.meta.description,
   };
 }
 
@@ -32,9 +32,9 @@ export default async function JakesCakesLayout({
   const lang = await resolveLangParam(params);
   const dict = await getDictionary(lang);
   const nav = [
-    { label: "Shop", href: `/${lang}/jakes-cakes/shop` },
-    { label: "About Us", href: `/${lang}/jakes-cakes/about-us` },
-    { label: "Contact", href: `/${lang}/jakes-cakes/contact` },
+    { label: dict.jakesCakes.nav.shop, href: `/${lang}/jakes-cakes/shop` },
+    { label: dict.jakesCakes.nav.aboutUs, href: `/${lang}/jakes-cakes/about-us` },
+    { label: dict.jakesCakes.nav.contact, href: `/${lang}/jakes-cakes/contact` },
   ];
 
   return (
@@ -53,7 +53,7 @@ export default async function JakesCakesLayout({
         <div className="float-right mr-15 mt-10 z-20 w-10">
           <NavMenu links={nav} hamburgerSrc="/jakes-cakes/hamburger.svg" hamburgerDarkSrc="/jakes-cakes/hamburger.svg"/>
         </div>
-        <CartIcon href={`/${lang}/jakes-cakes/cart`} />
+        <CartIcon href={`/${lang}/jakes-cakes/cart`} alt={dict.jakesCakes.nav.cartAlt} />
       </div>
       <div className="page-content">
         {children}

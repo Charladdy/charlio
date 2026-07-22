@@ -4,18 +4,29 @@ import Image from 'next/image'
 import { useCart, CART_MAX_QUANTITY } from './CartContext'
 import PlaceholderTile from './PlaceholderTile'
 
-export default function CartView({ lang }: { lang: string }) {
+export interface CartViewDict {
+  empty: string
+  browseShop: string
+  each: string
+  decreaseQuantityAria: string
+  increaseQuantityAria: string
+  remove: string
+  subtotal: string
+  proceedToCheckout: string
+}
+
+export default function CartView({ lang, dict }: { lang: string; dict: CartViewDict }) {
   const { items, subtotal, updateQuantity, removeItem } = useCart()
 
   if (items.length === 0) {
     return (
       <div className="cart-empty">
-        <p className="mb-4">Your cart is empty.</p>
+        <p className="mb-4">{dict.empty}</p>
         <a
           className="bg-[var(--rose)] hover:cursor-pointer px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)] inline-block"
           href={`/${lang}/jakes-cakes/shop`}
         >
-          Browse the Shop
+          {dict.browseShop}
         </a>
       </div>
     )
@@ -33,7 +44,7 @@ export default function CartView({ lang }: { lang: string }) {
             )}
             <div className="flex-1">
               <p className="font-[fraunces-variable] font-semibold text-[var(--burgundy)]">{item.name}</p>
-              <p className="text-sm">${item.price.toFixed(2)} each</p>
+              <p className="text-sm">${item.price.toFixed(2)} {dict.each}</p>
             </div>
             <div className="flex items-center border-1 border-[var(--grey)] rounded-full overflow-hidden">
               <button
@@ -41,7 +52,7 @@ export default function CartView({ lang }: { lang: string }) {
                 className="px-3 py-1 hover:cursor-pointer disabled:opacity-40"
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
                 disabled={item.quantity <= 1}
-                aria-label={`Decrease quantity of ${item.name}`}
+                aria-label={dict.decreaseQuantityAria.replace('{name}', item.name)}
               >
                 −
               </button>
@@ -51,7 +62,7 @@ export default function CartView({ lang }: { lang: string }) {
                 className="px-3 py-1 hover:cursor-pointer disabled:opacity-40"
                 onClick={() => updateQuantity(item.id, item.quantity + 1)}
                 disabled={item.quantity >= CART_MAX_QUANTITY}
-                aria-label={`Increase quantity of ${item.name}`}
+                aria-label={dict.increaseQuantityAria.replace('{name}', item.name)}
               >
                 +
               </button>
@@ -62,7 +73,7 @@ export default function CartView({ lang }: { lang: string }) {
               className="text-sm underline hover:cursor-pointer hover:font-semibold"
               onClick={() => removeItem(item.id)}
             >
-              Remove
+              {dict.remove}
             </button>
           </div>
         ))}
@@ -70,14 +81,14 @@ export default function CartView({ lang }: { lang: string }) {
       <div className="cart-summary flex justify-end">
         <div className="w-full max-w-sm bg-[var(--blush)] rounded-xl shadow-md p-6 border-1 border-[var(--grey)]">
           <div className="flex justify-between mb-4 text-lg font-semibold">
-            <span>Subtotal</span>
+            <span>{dict.subtotal}</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
           <a
             className="bg-[var(--rose)] hover:cursor-pointer px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)] block text-center"
             href={`/${lang}/jakes-cakes/checkout`}
           >
-            Proceed to Checkout
+            {dict.proceedToCheckout}
           </a>
         </div>
       </div>

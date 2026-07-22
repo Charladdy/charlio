@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 
 interface NavLink {
@@ -18,9 +18,22 @@ interface NavMenuProps {
 export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.svg', hamburgerDarkSrc = '/hamburger-menu_dark.svg' }: NavMenuProps) {
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     setMounted(true)
+    
+    function handleOutsideClick(event: MouseEvent){
+          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      // Clean up the event listener on component unmount
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
   }, [])
 
   return (
@@ -36,7 +49,7 @@ export default function NavMenu({ links, hamburgerSrc = '/hamburger-menu.svg', h
       </button>
 
       {mounted && open && createPortal(
-        <nav className="nav-menu" aria-label="Site navigation">
+        <nav className="nav-menu" aria-label="Site navigation" ref={dropdownRef}>
           <ul>
             {links.map((link) => (
               <li className="v-nav-menu-li" key={link.label}>

@@ -6,6 +6,13 @@ import { useCart, CART_MAX_QUANTITY } from './CartContext'
 import PlaceholderTile from './PlaceholderTile'
 import type { ProductAccent } from '@/lib/jakes-cakes/products'
 
+export interface ItemDict {
+  decreaseQuantityAria: string
+  increaseQuantityAria: string
+  addToCart: string
+  added: string
+}
+
 export interface ItemProps {
   id: string
   image?: string
@@ -14,9 +21,10 @@ export interface ItemProps {
   description: string
   price: number
   accent?: ProductAccent
+  dict: ItemDict
 }
 
-export default function Item({ id, image, imageAlt, name, description, price, accent = 'rose' }: ItemProps) {
+export default function Item({ id, image, imageAlt, name, description, price, accent = 'rose', dict }: ItemProps) {
   const { addItem } = useCart()
   const [quantity, setQuantity] = useState(1)
   const [added, setAdded] = useState(false)
@@ -45,7 +53,7 @@ export default function Item({ id, image, imageAlt, name, description, price, ac
               className="px-3 py-1 hover:cursor-pointer disabled:opacity-40 bg-[var(--blush)]"
               onClick={() => setQuantity(q => Math.max(1, q - 1))}
               disabled={quantity <= 1}
-              aria-label={`Decrease quantity of ${name}`}
+              aria-label={dict.decreaseQuantityAria.replace('{name}', name)}
             >
               −
             </button>
@@ -55,7 +63,7 @@ export default function Item({ id, image, imageAlt, name, description, price, ac
               className="px-3 py-1 hover:cursor-pointer disabled:opacity-40 bg-[var(--blush)]"
               onClick={() => setQuantity(q => Math.min(CART_MAX_QUANTITY, q + 1))}
               disabled={quantity >= CART_MAX_QUANTITY}
-              aria-label={`Increase quantity of ${name}`}
+              aria-label={dict.increaseQuantityAria.replace('{name}', name)}
             >
               +
             </button>
@@ -65,7 +73,7 @@ export default function Item({ id, image, imageAlt, name, description, price, ac
             className="bg-[var(--rose)] hover:cursor-pointer px-4 py-2 border-1 border-[var(--grey)] text-[var(--cream)] rounded-full text-sm"
             onClick={handleAdd}
           >
-            {added ? 'Added!' : 'Add to Cart'}
+            {added ? dict.added : dict.addToCart}
           </button>
         </div>
       </div>
