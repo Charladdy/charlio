@@ -368,6 +368,8 @@ const dictionary = {
       newsletterIntro: 'Suscríbete a nuestro boletín y sé el primero en enterarte de eventos y ofertas especiales.',
       emailPlaceholder: 'Por favor ingresa tu correo electrónico...',
       signUp: 'Suscribirse',
+      signupDialogMessage: 'Charlio Webworks puede ayudarte a agregar formularios de suscripción como este para ayudarte a llegar a tus clientes.',
+      closeDialogLabel: 'Cerrar',
     },
     aboutUs: {
       title: 'Sobre Nosotros',

@@ -11,7 +11,7 @@ export default async function page({ params }: { params: Promise<{ lang: string 
         <div className="page-content p-10">
             <h1 className="text-3xl font-semibold mb-5 font-[fraunces-variable] text-[var(--burgundy)]">{t.title}</h1>
             <div className="relative min-h-[55dvw]">
-                <Image className="w-[40%] min-w-[300px] float-right m-5" src="/jakes-cakes/jake_bakes.png" width={500} height={500} alt={t.jakeBakesAlt}/>
+                <Image className="w-[100%] sm:w-[40%] min-w-[300px] float-right m-5" src="/jakes-cakes/jake_bakes.png" width={500} height={500} alt={t.jakeBakesAlt}/>
                 <div className="my-auto">
                     <div className="mb-5">{t.para1}
                     </div>

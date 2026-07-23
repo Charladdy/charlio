@@ -368,6 +368,8 @@ const dictionary = {
       newsletterIntro: 'Sign up for our newsletter and be the first to hear about events and special offers.',
       emailPlaceholder: 'Please enter your email...',
       signUp: 'Sign Up',
+      signupDialogMessage: 'Charlio Webworks can help you add opt-in forms like this to help you reach your customers.',
+      closeDialogLabel: 'Close',
     },
     aboutUs: {
       title: 'About Us',
