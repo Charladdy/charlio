@@ -36,11 +36,6 @@
   position: relative;
   overflow-x: hidden;
   width: 100%;
-  /*background-image: url('/jakes-cakes/home-divider.svg');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1374.01 / 1394.413;*/
 }
 
 @media screen and (max-width: 1000px){
@@ -49,7 +44,7 @@
     }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 767px){
     .hero-div{
         top: var(--navbar-ht);
     }

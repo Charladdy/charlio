@@ -350,10 +350,10 @@ const dictionary = {
     home: {
       displayCaseAlt: 'Vitrina llena de pasteles',
       borderAlt: 'Imagen decorativa de borde',
-      heroLine1: 'Toda nuestra pastelería.',
-      heroLine2: 'Al alcance de tu mano.',
+      heroLine1: 'Nuestra pastelería.',
+      heroLine2: 'En línea.',
       shopNow: 'Comprar Ahora',
-      heading: 'Simplemente Dulce.',
+      heading: 'Dulce y Divino.',
       intro1: 'Ya sea que estés celebrando un evento especial o un día cualquiera, busques una torre de pisos o un pedacito de cielo, Jake\'s Cakes tiene justo lo que buscas. O lo tendría, si existiera.',
       intro2: 'La buena noticia es que, aunque Jake\'s Cakes no sea real, Jake sí lo es, así que explora este sitio de demostración y contáctalo si quieres que te construya tu tienda en línea.',
       dividerAlt: 'Imagen divisoria de la página de inicio',

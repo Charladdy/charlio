@@ -25,9 +25,9 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
 
     return (
         <div className="page-content p-10">
-            <h1 className="text-3xl font-semibold mb-2 font-[fraunces-variable] text-[var(--burgundy)]">{t.title}</h1>
+            <h1 className="text-3xl font-semibold mb-2 font-[fraunces-variable] text-[var(--burgundy)] dark:text-[var(--rose)]">{t.title}</h1>
             <p className="mb-8 max-w-2xl">{t.intro}</p>
-            <a href="#everyday-cakes"><h2 className="text-2xl font-medium mb-2 font-[fraunces-variable] text-[var(--burgundy)]">{t.everydayHeading}</h2></a>
+            <a href="#everyday-cakes"><h2 className="text-2xl font-medium mb-2 font-[fraunces-variable] text-[var(--burgundy)] dark:text-[var(--rose)]">{t.everydayHeading}</h2></a>
             <div className="cake-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {products.map(product => {
                     const localized = localizeProduct(product, productDict);
@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                     );
                 })}
             </div>
-            <h2 id="wedding-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] scroll-mt-[var(--navbar-ht)]">{t.weddingHeading}</h2>
+            <h2 id="wedding-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] dark:text-[var(--rose)] scroll-mt-[var(--navbar-ht)]">{t.weddingHeading}</h2>
             <div className="cake-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {wedding_cakes.map(product => {
                     const localized = localizeProduct(product, productDict);
@@ -65,7 +65,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                     );
                 })}
             </div>
-            <h2 id="bday-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] scroll-mt-[var(--navbar-ht)]">{t.birthdayHeading}</h2>
+            <h2 id="bday-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] dark:text-[var(--rose)] scroll-mt-[var(--navbar-ht)]">{t.birthdayHeading}</h2>
             <div className="cake-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {bday_cakes.map(product => {
                     const localized = localizeProduct(product, productDict);
@@ -84,7 +84,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                     );
                 })}
             </div>
-            <h2 id="grad-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] scroll-mt-[var(--navbar-ht)]">{t.graduationHeading}</h2>
+            <h2 id="grad-cakes" className="text-2xl font-medium mb-2 mt-5 font-[fraunces-variable] text-[var(--burgundy)] dark:text-[var(--rose)] scroll-mt-[var(--navbar-ht)]">{t.graduationHeading}</h2>
             <div className="cake-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {grad_cakes.map(product => {
                     const localized = localizeProduct(product, productDict);

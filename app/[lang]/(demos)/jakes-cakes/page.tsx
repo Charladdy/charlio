@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                     <Image className="absolute w-full bottom-[200px] dark:invisible" src="/jakes-cakes/hero-border-bottom.svg" alt={t.borderAlt} height={279} width={1241}/>
                     <Image className="absolute w-full bottom-[200px] invisible dark:visible " src="/jakes-cakes/hero-border-bottom-dark.svg" alt={t.borderAlt} height={279} width={1242}/>
                     <div className="absolute flex left-0 right-0 bottom-40 w-100 h-fit bg-[var(--blush)] m-auto rounded-xl shadow-xl">
-                        <div className="flex-1 p-5 pl-10 text-lg">
+                        <div className="flex-1 p-5 pl-10 text-md dark:text-[var(--grey)]">
                             <p className="m-auto">{t.heroLine1}</p>
                             <p className="m-auto">{t.heroLine2}</p>
                         </div>
@@ -30,17 +30,17 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                 </div>
             </div>
             <div className="relative flex grid grid-cols-1 md:grid-cols-2 h-fit md:mt-[calc(var(--navbar-ht)*-2.4)] md:mb-2">
-                <h1 className="relative font-[fraunces-variable] font-black flex-1 text-[var(--burgundy)] text-[12vw] md:text-[6rem] m-auto md:pl-30">{t.heading}</h1>
+                <h1 className="relative font-[fraunces-variable] font-black flex-1 text-[var(--burgundy)] dark:text-[var(--blush)] text-[12vw] max-text-[4rem] md:text-7xl lg:text-8xl m-auto md:pl-30">{t.heading}</h1>
                 <div className="flex-1 lg:pr-30 m-15 lg:m-auto">
                     <p className="mb-5 text-lg">{t.intro1}</p>
                     <p className="text-lg">{t.intro2}</p>
                 </div>
             </div>
             <div className="divider-div text-[var(--cream)] mt-[-5vw] lg:mt-auto">
-                <Image className="relative left-1/2 -translate-x-1/2 w-[110vw] max-w-[1200px] min-w-[800px]" src="/jakes-cakes/home-divider.svg" alt={t.dividerAlt} height={0} width={0}/>
-                <h2 className="absolute font-[fraunces-variable] font-bold flex-1 text-[8vw] md:text-[4rem] right-20 top-30 top-[35vw] sm:top-[22vw] w-[60vw] md:w-120 text-right">
+                <Image className="relative left-1/2 -translate-x-1/2 w-[110vw] max-w-[1200px] min-w-[800px] overflow-visible md:aspect-auto" src="/jakes-cakes/home-divider.svg" alt={t.dividerAlt} height={0} width={0}/>
+                <h2 className="absolute font-[fraunces-variable] font-bold flex-1 text-[8vw] md:text-[4rem] right-10 top-[35vw] sm:top-[22vw] md:top-50 w-[70vw] md:w-120 text-right">
                     &emsp;{t.occasionsHeading}</h2>
-                <div className="absolute top-[65vw] sm:top-[46vw] lg:top-110 w-full m-auto">
+                <div className="absolute bottom-40 sm:top-[46vw] lg:top-110 w-full m-auto">
                     <p className="px-10 lg:px-50 text-md font-light">{t.occasionsBody}</p>
                     <div className="flex w-full lg:w-[80%] m-auto mt-[2vw] lg:mt-[5%]">
                         <div className="flex-1 min-w-0 m-5 hover:cursor-pointer hover:scale-105">

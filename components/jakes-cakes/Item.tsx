@@ -44,9 +44,9 @@ export default function Item({ id, image, imageAlt, name, description, price, ac
       )}
       <div className="p-4 flex flex-col flex-1">
         <h3 className="font-[fraunces-variable] font-semibold text-lg text-[var(--burgundy)]">{name}</h3>
-        <p className="text-sm flex-1 mt-1 mb-3">{description}</p>
-        <p className="font-semibold mb-3">${price.toFixed(2)}</p>
-        <div className="flex items-center justify-between gap-2 mt-auto">
+        <p className="text-sm flex-1 mt-1 mb-3 text-[var(--grey)]">{description}</p>
+        <p className="font-semibold mb-3 text-[var(--grey)]">${price.toFixed(2)}</p>
+        <div className="flex items-center justify-between gap-2 mt-auto  text-[var(--grey)]">
           <div className="flex items-center border-1 bg-[var(--cream)] border-[var(--grey)] rounded-full overflow-hidden">
             <button
               type="button"

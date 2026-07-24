@@ -16,7 +16,7 @@ export default function NewsletterSignupDialog({ dict }: { dict: NewsletterSignu
       <button
         type="button"
         onClick={() => dialogRef.current?.showModal()}
-        className="bg-[var(--rose)] hover:cursor-pointer px-1 lg:px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)]"
+        className="bg-[var(--rose)] hover:cursor-pointer px-2 lg:px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)] w-fit"
       >
         {dict.signUp}
       </button>
