@@ -12,7 +12,7 @@ export default function NewsletterSignupDialog({ dict }: { dict: NewsletterSignu
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   return (
-    <div className="flex-1 m-auto">
+    <div className="m-auto">
       <button
         type="button"
         onClick={() => dialogRef.current?.showModal()}
