@@ -19,6 +19,17 @@ export default async function page({ params }: { params: Promise<{ lang: string 
         <div className="page-content">
             <h1 className="text-3xl">{t.title}</h1>
             <p>{t.intro}</p>
+            <h2 className="text-2xl mb-5">{t.clientProjectsHeading}</h2>
+            <div className="md:flex">
+                <div className="flex-1 pl-5 md:pr-5 md:pl-0  border-b md:border-r md:border-b-0">
+                    <div className="h-35 mb-5 dark:mb-15">
+                        <a href={`https://silversurfschool.com`} target="_blank"><Image className="absolute md:w-1/3 max-w-80 hover:scale-102 dark:bg-gray-200 dark: rounded-lg" src="/silver_surf_og.png" width={300} height={300} alt={t.silverSurfAlt}/></a>
+                    </div>
+                    <h3 className="font-bold text-xl mb-2">Silver Surf School</h3>
+                    <p>{t.silverSurfDesc}</p>
+                </div>
+                <div className="flex-1"></div>
+            </div>
             <h2 className="text-2xl mb-5">{t.demoSitesHeading}</h2>
             <div className="md:flex">
                 <div className="flex-1 pl-5 md:pr-5 md:pl-0  border-b md:border-r md:border-b-0">

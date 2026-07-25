@@ -16,13 +16,13 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                     <Image className="relative w-full overflow-hidden top-[-200px]" src="/jakes-cakes/display_case.png" alt={t.displayCaseAlt} height={1000} width={1000}/>
                     <Image className="absolute w-full bottom-[200px] dark:invisible" src="/jakes-cakes/hero-border-bottom.svg" alt={t.borderAlt} height={279} width={1241}/>
                     <Image className="absolute w-full bottom-[200px] invisible dark:visible " src="/jakes-cakes/hero-border-bottom-dark.svg" alt={t.borderAlt} height={279} width={1242}/>
-                    <div className="absolute flex left-0 right-0 bottom-40 w-[80%] sm:w-100 h-fit bg-[var(--blush)] m-auto rounded-xl shadow-xl">
-                        <div className="flex-1 p-5 pl-10 text-md dark:text-[var(--grey)]">
+                    <div className="absolute flex left-0 right-0 bottom-40 w-[80%] sm:w-100 max-w-[400px] h-fit bg-[var(--blush)] m-auto rounded-xl shadow-xl">
+                        <div className="flex-3 xs:flex-1 p-2 sm:p-5 pl-5 sm:pl-10 text-md dark:text-[var(--grey)]">
                             <p className="m-auto">{t.heroLine1}</p>
                             <p className="m-auto">{t.heroLine2}</p>
                         </div>
-                        <div className='flex-1 m-auto w-fit'>
-                            <a className="bg-[var(--rose)] hover:cursor-pointer w-fit sm:px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)] text-sm sm:text-md" href={`/${lang}/jakes-cakes/shop`}>
+                        <div className='flex-2 m-auto'>
+                            <a className="bg-[var(--rose)] hover:cursor-pointer w-fit px-2 sm:px-5 py-2 border-2 border-[var(--grey)] text-[var(--cream)] text-sm sm:text-md" href={`/${lang}/jakes-cakes/shop`}>
                                 {t.shopNow}
                             </a>
                         </div>
