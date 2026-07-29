@@ -20,18 +20,18 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                 <div className="flex-1 mr-10 border-r">
                     <div>
                         <h2 className="title-header h-fit text-xl mb-10">{t.jakesOnMain}</h2>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/lunch`} target="_blank">{t.lunch}</a></div>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/dinner`} target="_blank">{t.dinner}</a></div>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/drinks`} target="_blank">{t.drinks}</a></div>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/brunch`} target="_blank">{t.sundayBrunch}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/lunch`}>{t.lunch}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/dinner`}>{t.dinner}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/drinks`}>{t.drinks}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/main/brunch`}>{t.sundayBrunch}</a></div>
                     </div>
                 </div>
                 <div className="flex-1 md:ml-10">
                     <div>
                         <h2 className="title-header h-fit text-xl mb-10">{t.jakesDowntown}</h2>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/downtown/lunch`} target="_blank">{t.lunch}</a></div>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/downtown/dinner`} target="_blank">{t.dinner}</a></div>
-                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/drinks`} target="_blank">{t.drinks}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/downtown/lunch`}>{t.lunch}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/downtown/dinner`}>{t.dinner}</a></div>
+                        <div className="w-full mb-2 ml-2"><a href={`/${lang}/jakes-bistro/menus/drinks`}>{t.drinks}</a></div>
                     </div>
                 </div>
             </div>

@@ -16,10 +16,10 @@ interface TradulioMenuFrameProps {
     lang: Locale;
     dict: TradulioMenuFrameDict;
     tradulioUrl: string;
-    pdfSrc: string;
+    children: React.ReactNode;
 }
 
-export default function TradulioMenuFrame({ lang, dict, tradulioUrl, pdfSrc }: TradulioMenuFrameProps) {
+export default function TradulioMenuFrame({ lang, dict, tradulioUrl, children }: TradulioMenuFrameProps) {
     useEffect(() => {
         if (lang !== ORIGINAL_LANGUAGE && TRANSLATED_LANGUAGES.includes(lang)) {
             window.location.href = tradulioUrl;
@@ -27,8 +27,8 @@ export default function TradulioMenuFrame({ lang, dict, tradulioUrl, pdfSrc }: T
     }, [lang, tradulioUrl]);
 
     return(
-        <div className="w-full h-[90vh]">
-            <div className="fixed top-60 right-[10vw] flex">
+        <>
+            <div className="fixed bottom-45 right-[10vw] flex">
                 <div className="mt-5 text-gray-500 text-2xl border-2 rounded-xl bg-white align-middle h-fit p-2 pr-10">{dict.seeItInTradulio}</div>
                 <a href={tradulioUrl}>
                 <div className="absolute w-20 ml-[-15%]">
@@ -36,10 +36,7 @@ export default function TradulioMenuFrame({ lang, dict, tradulioUrl, pdfSrc }: T
                 </div>
                 </a>
             </div>
-            <iframe
-                className="w-full h-full"
-                src={`${pdfSrc}#toolbar=0`}
-            />
-        </div>
+            {children}
+        </>
     )
 }
