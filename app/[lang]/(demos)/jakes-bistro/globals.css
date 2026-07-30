@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root{
-    --navbar-ht: 200px;
+    --navbar-ht: 120px;
     --footer-ht: 150px;
     --hunter-green: #006837;
     --charcoal: #242633;

@@ -28,10 +28,10 @@ export default function TradulioMenuFrame({ lang, dict, tradulioUrl, children }:
 
     return(
         <>
-            <div className="fixed bottom-45 right-[10vw] flex">
-                <div className="mt-5 text-gray-500 text-2xl border-2 rounded-xl bg-white align-middle h-fit p-2 pr-10">{dict.seeItInTradulio}</div>
+            <div className="fixed bottom-45 right-[12vw] flex">
+                <div className="mt-2 text-gray-500 text-lg border-2 rounded-xl bg-white align-middle h-fit p-2 pr-8">{dict.seeItInTradulio}</div>
                 <a href={tradulioUrl}>
-                <div className="absolute w-20 ml-[-15%]">
+                <div className="absolute w-16 ml-[-15%]">
                     <Image src="/animations/tradulio_button.gif" height={150} width={150} alt={dict.openInTradulio}/>
                 </div>
                 </a>

@@ -40,18 +40,18 @@ export default async function JakesBistroLayout({
     <>
       <link rel="stylesheet" href="https://use.typekit.net/mxp6lef.css" />
       <div className="navbar">
-        <div className="fixed left-15 top-10 h-40 w-auto">
+        <div className="fixed left-8 top-6 h-16 w-auto">
           <Link href={`/${lang}/jakes-bistro`}>
-             <Image src="/jakes-bistro/JakesBistro.png" alt="Jake's Bistro" height={200} width={200} loading='eager' />
+             <Image src="/jakes-bistro/JakesBistro.png" alt="Jake's Bistro" height={160} width={160} loading='eager' />
           </Link>
         </div>
 
         <div className="absolute left-1/2 -translate-x-1/2 top-2/5 -translate-y-1/2 flex h-10 justify-center items-center w-[340px] pointer-events-none">
         </div>
-        <div className="invisible md:visible">
+        <div className="invisible lg:visible fixed left-30 top-16 h-10 w-full">
           <HorizontalNavMenu links={nav} bottomLoc={15} />
         </div>
-        <div className="float-right mt-20 mr-10 md:hidden">
+        <div className="float-right mt-12 mr-10 lg:hidden">
           <NavMenu hamburgerDarkSrc="/hamburger-menu.svg" links={nav} />
         </div>
       </div>
