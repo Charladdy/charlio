@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { locales, defaultLocale } from '@/lib/i18n/locales';
 
-const BASE_URL = 'https://charl.io';
+const BASE_URL = 'https://www.charl.io';
 
 const pages: Array<{
   path: string;

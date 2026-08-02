@@ -36,8 +36,8 @@ export default async function MainLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Charlio Webworks',
-    url: 'https://charl.io',
-    logo: 'https://charl.io/charlio-wordmark.svg',
+    url: 'https://www.charl.io',
+    logo: 'https://www.charl.io/charlio-wordmark.svg',
     description: dict.main.jsonLdDescription,
   };
 

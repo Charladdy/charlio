@@ -1,6 +1,6 @@
 import type { Locale } from './i18n/locales';
 
-export const SITE_URL = 'https://charl.io';
+export const SITE_URL = 'https://www.charl.io';
 
 // Next only auto-links the opengraph-image file convention into a route's
 // og:image tag when nothing in the tree sets its own `openGraph` object —

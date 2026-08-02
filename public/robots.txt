@@ -6,4 +6,4 @@ Disallow: /es/jakes-bistro
 Allow: /es/jakes-bistro/menus
 Disallow: /es/yardsdale-plumbing-co
 
-Sitemap: https://charl.io/sitemap.xml
+Sitemap: https://www.charl.io/sitemap.xml

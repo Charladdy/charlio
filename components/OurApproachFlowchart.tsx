@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Lottie from 'lottie-react'
 import animationData from '@/public/animations/mockup.json'
 import flowchartData from '@/public/animations/flowchart_stand.json'
+import backendData from '@/public/animations/backend.json'
 
 interface OurApproachFlowchartDict {
     buttons: readonly string[]
@@ -92,7 +93,10 @@ export default function OurApproachFlowchart({ dict }: OurApproachFlowchartProps
                 }
                 {flowState==3 &&
                 <>
-                <div>{dict.step3}</div>
+                    <div className="w-full bg-white rounded-xl mb-2">
+                        <Lottie animationData={backendData} autoplay={true} loop={true}/>
+                    </div>
+                    <div>{dict.step3}</div>
                 </>
                 }
                 {flowState==4 &&
