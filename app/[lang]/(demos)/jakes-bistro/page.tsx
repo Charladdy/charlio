@@ -22,9 +22,10 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
                 <Image className="cooking-img" src="/jakes-bistro/pan_searing.png" width={2000} height={2000} alt={t.cookingAlt}/>
                 <h2 className="cooking-copy">{t.cookingCaption}</h2>
             </div>
-            <div className="copy-div"><p className="m-auto w-[90%] md:w-sm mb-5">{t.para1}</p>
-                <p className="m-auto w-[90%] md:w-sm mb-5">{t.para2Pre}<a href="https://tradulio.com" target="_blank">{t.tradulioLink}</a>{t.para2Post}</p>
-                <p className="m-auto w-[90%] md:w-sm mb-5">{t.para3Pre}<a href={`/${lang}/contact`} target="_blank">{t.reachOutLink}</a>{t.para3Post}</p>
+            <div className="copy-div">
+                <p className="m-auto w-full md:w-sm mb-5 bg-[var(--background)] p-2 rounded-xl">{t.para1}</p>
+                <p className="m-auto w-full md:w-sm mb-5 bg-[var(--background)] p-2 rounded-xl">{t.para2Pre}<a href="https://tradulio.com" target="_blank">{t.tradulioLink}</a>{t.para2Post}</p>
+                <p className="m-auto w-full md:w-sm mb-5  bg-[var(--background)] p-2 rounded-xl">{t.para3Pre}<a href={`/${lang}/contact`} target="_blank">{t.reachOutLink}</a>{t.para3Post}</p>
             </div>
         </div>
     );
