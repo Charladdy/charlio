@@ -3,12 +3,12 @@ import './page-styles.css'
 import type { Metadata } from 'next'
 import { resolveLangParam } from '@/lib/i18n/locales'
 import { getDictionary } from '@/lib/i18n/getDictionary'
-import { pageOpenGraph } from '@/lib/seo'
+import { pageOpenGraph, canonicalUrl } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const lang = await resolveLangParam(params);
     const dict = await getDictionary(lang);
-    return { title: dict.main.contact.metaTitle, openGraph: pageOpenGraph(lang, '/contact') };
+    return { title: dict.main.contact.metaTitle, openGraph: pageOpenGraph(lang, '/contact'), alternates: { canonical: canonicalUrl(lang, '/contact') } };
 }
 
 export default async function page({ params }: { params: Promise<{ lang: string }> }){

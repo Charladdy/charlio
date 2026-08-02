@@ -1,7 +1,9 @@
 User-agent: *
 Disallow: /en/jakes-bistro
+Allow: /en/jakes-bistro/menus
 Disallow: /en/yardsdale-plumbing-co
 Disallow: /es/jakes-bistro
+Allow: /es/jakes-bistro/menus
 Disallow: /es/yardsdale-plumbing-co
 
 Sitemap: https://charl.io/sitemap.xml

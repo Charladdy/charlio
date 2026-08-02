@@ -1,9 +1,16 @@
 import FillDiv from "@/components/FillDiv";
 import HeroText from "@/components/HeroText";
 import Image from "next/image";
+import type { Metadata } from 'next'
 import { resolveLangParam } from "@/lib/i18n/locales";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { canonicalUrl } from '@/lib/seo'
 import './page-styles.css'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+    const lang = await resolveLangParam(params);
+    return { alternates: { canonical: canonicalUrl(lang, '') } };
+}
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const lang = await resolveLangParam(params);

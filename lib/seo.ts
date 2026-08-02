@@ -23,9 +23,13 @@ export function siteOpenGraph(lang: Locale) {
   };
 }
 
+export function canonicalUrl(lang: Locale, path: string) {
+  return `${SITE_URL}/${lang}${path}`;
+}
+
 export function pageOpenGraph(lang: Locale, path: string) {
   return {
     ...siteOpenGraph(lang),
-    url: `${SITE_URL}/${lang}${path}`,
+    url: canonicalUrl(lang, path),
   };
 }
