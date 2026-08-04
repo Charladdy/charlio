@@ -4,7 +4,7 @@
     --background: #fff;
     --foreground: #171717;
     --nav-height: 120px;
-    --footer-height: 80px;
+    --footer-height: 200px;
     --hero-footer-height: 150px;
     --main-palette1: #502e8c;
     --main-palette2: #662d91;
@@ -304,7 +304,8 @@ p {
 }
 
 .footer-div{
-  height: var(--footer-height);
+  height: fit-content;
+  min-height: var(--footer-height);
   padding-top: 30px;
   position: relative;
   bottom: 0;
@@ -313,7 +314,7 @@ p {
   z-index: 3;
 }
 
-.footer-copyright{
+.footer-text{
   color: #ccc;
   margin-left: 50px;
 }
