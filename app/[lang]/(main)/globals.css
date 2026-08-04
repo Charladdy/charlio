@@ -3,6 +3,7 @@
   :root {
     --background: #fff;
     --foreground: #171717;
+    --footer-color:#ccc;
     --nav-height: 120px;
     --footer-height: 200px;
     --hero-footer-height: 150px;

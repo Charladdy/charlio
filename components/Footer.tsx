@@ -38,21 +38,21 @@ export default function Footer({ lang, dict, switcherDict, wrapperClassName = 'f
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
                         className="p-2 rounded-full bg-gray-800 hover:bg-gray-600 transition-colors duration-200">
-                            <FaLinkedin size={25}/>
+                            <FaLinkedin className="fill-white" size={25}/>
                         </a>
                         <a href="https://www.instagram.com/charliowebworks/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
                         className="p-2 rounded-full bg-gray-800 hover:bg-gray-600 transition-colors duration-200">
-                            <FaInstagram size={25}/>
+                            <FaInstagram className="fill-white" size={25}/>
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=61588756720567"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Facebook"
                         className="p-2 rounded-full bg-gray-800 hover:bg-gray-600 transition-colors duration-200">
-                            <FaFacebook size={25}/>
+                            <FaFacebook className="fill-white" size={25}/>
                         </a>                       
                     </div>
                 </div>
