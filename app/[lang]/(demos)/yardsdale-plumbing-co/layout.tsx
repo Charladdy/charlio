@@ -58,7 +58,7 @@ export default async function YardsdaleLayout({
         </div>
       </div>
       {children}
-      <Footer lang={lang} dict={dict.common.footer} switcherDict={dict.common.languageSwitcher} wrapperClassName="footer" />
+      <Footer lang={lang} dict={dict.common.footer} switcherDict={dict.common.languageSwitcher} wrapperClassName="footy" />
     </>
   );
 }

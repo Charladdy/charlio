@@ -2,7 +2,7 @@
 
 :root{
     --navbar-height: 200px;
-    --footer-height: 80px;
+    --footer-height: 300px;
 
     --pl-blue: #4a5fff;
     --pl-red: #ff4a54;
@@ -46,16 +46,16 @@ br{
     margin: auto;
 }
 
-.footer{
+.footy{
     position: relative;
-    height: 80px;
-    left: 0;
-    width: 100vw;
-    padding: 20px 20px;
-    border-top: 25px var(--pl-slate);
+    height: var(--footer-ht);
     background: var(--pl-charcoal);
-    color: #dfdfdf;
     bottom: 0;
+    padding: 50px 25px;
+    z-index: 2;
+    color: white;
+    border-top: 2px solid var(--pl-slate);
+    box-shadow: 0px -2px 1px rgba(0,0,0,0.4);
 }
 
 .hero-div{

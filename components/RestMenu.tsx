@@ -42,7 +42,7 @@ export function RestMenuItem({name, price, desc}:ItemProps){
         <div className="w-full h-fit py-2 px-5">            
             <div className="flex w-full">
                 <div className="flex-3 text-lg font-bold text-[var(--charcoal)] text-left">{name}</div>
-                <div className="flex-1 text-lg font-semibold text-[var(--hunter-green)] text-right">{price}</div>
+                <div className="flex-1 text-lg font-semibold text-[var(--hunter-green)] text-right">${price}</div>
             </div>
             {desc && <div className="text-md text-[var(--charcoal)] my-2">{desc}</div>}
         </div>
