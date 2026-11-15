@@ -45,9 +45,11 @@ export type MenuCategory = {
   name?: string;
   displayName?: string;
   description?: string;
-  items?: Array<{
-    _key: string;
-  } & MenuItem>;
+  items?: Array<
+    {
+      _key: string;
+    } & MenuItem
+  >;
 };
 
 export type Menu = {
@@ -61,9 +63,11 @@ export type Menu = {
   slug?: Slug;
   location?: string;
   description?: string;
-  categories?: Array<{
-    _key: string;
-  } & MenuCategory>;
+  categories?: Array<
+    {
+      _key: string;
+    } & MenuCategory
+  >;
 };
 
 export type Slug = {
@@ -185,7 +189,21 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type AllSanitySchemaTypes = MenuItem | MenuCategory | Menu | Slug | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
+export type AllSanitySchemaTypes =
+  | MenuItem
+  | MenuCategory
+  | Menu
+  | Slug
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityImageMetadata
+  | SanityImageHotspot
+  | SanityImageCrop
+  | SanityFileAsset
+  | SanityAssetSourceData
+  | SanityImageAsset
+  | Geopoint;
 
 // Source: ../charlio/lib/sanity/queries.ts
 // Variable: ALL_MENUS_QUERY
@@ -223,7 +241,8 @@ export type MENU_BY_SLUG_QUERY_RESULT = {
           _type: "span";
           _key: string;
         }>;
-        style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+        style?:
+          "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
         listItem?: "bullet" | "number";
         markDefs?: Array<{
           href?: string;
@@ -243,8 +262,7 @@ export type MENU_BY_SLUG_QUERY_RESULT = {
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == \"menu\"] | order(name asc) {\n    _id,\n    name,\n    displayName,\n    slug,\n    location,\n    description\n  }": ALL_MENUS_QUERY_RESULT;
-    "*[_type == \"menu\" && slug.current == $slug][0] {\n    _id,\n    name,\n    displayName,\n    slug,\n    location,\n    description,\n    categories[] {\n      name,\n      displayName,\n      description,\n      items[] {\n        name,\n        displayName,\n        description,\n        price\n      }\n    }\n  }": MENU_BY_SLUG_QUERY_RESULT;
+    '*[_type == "menu"] | order(name asc) {\n    _id,\n    name,\n    displayName,\n    slug,\n    location,\n    description\n  }': ALL_MENUS_QUERY_RESULT;
+    '*[_type == "menu" && slug.current == $slug][0] {\n    _id,\n    name,\n    displayName,\n    slug,\n    location,\n    description,\n    categories[] {\n      name,\n      displayName,\n      description,\n      items[] {\n        name,\n        displayName,\n        description,\n        price\n      }\n    }\n  }': MENU_BY_SLUG_QUERY_RESULT;
   }
 }
-

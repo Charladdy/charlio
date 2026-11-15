@@ -21,9 +21,10 @@ interface FooterProps {
     dict: FooterDict
     switcherDict: LanguageSwitcherDict
     wrapperClassName?: string
+    hideLanguageSwitcher?: boolean
 }
 
-export default function Footer({ lang, dict, switcherDict, wrapperClassName = 'footer-div' }: FooterProps){
+export default function Footer({ lang, dict, switcherDict, wrapperClassName = 'footer-div', hideLanguageSwitcher = false }: FooterProps){
     const pathname = usePathname()
     const pathWithoutLocale = pathname.replace(/^\/(en|es)(?=\/|$)/, '')
 
@@ -61,21 +62,23 @@ export default function Footer({ lang, dict, switcherDict, wrapperClassName = 'f
                         <div className="footer-link text-white underline border-r hover:font-semibold flex-1 text-center"><a href={`/${lang}/cookies`} target="_blank">{dict.cookies}</a></div>
                         <div className="footer-link text-white underline border-r hover:font-semibold flex-1 text-center"><a href="https://charladdy.com/tos" target="_blank">{dict.termsOfService}</a></div>
                         <div className="footer-link text-white underline border-r hover:font-semibold flex-1 text-center"><a href="https://charladdy.com/privacy" target="_blank">{dict.privacy}</a></div>
-                        <div className="footer-link text-white underline hover:font-semibold flex-1 text-center">
-                            {locales.map((l, i) => (
-                                <span key={l}>
-                                    {i > 0 && ' / '}
-                                    <a
-                                        href={`/${l}${pathWithoutLocale}`}
-                                        onClick={() => persistLocaleCookie(l)}
-                                        aria-current={l === lang ? 'true' : undefined}
-                                        className={l === lang ? 'font-bold' : ''}
-                                    >
-                                        {switcherDict[l]}
-                                    </a>
-                                </span>
-                            ))}
-                        </div>
+                        {!hideLanguageSwitcher && (
+                            <div className="footer-link text-white underline hover:font-semibold flex-1 text-center">
+                                {locales.map((l, i) => (
+                                    <span key={l}>
+                                        {i > 0 && ' / '}
+                                        <a
+                                            href={`/${l}${pathWithoutLocale}`}
+                                            onClick={() => persistLocaleCookie(l)}
+                                            aria-current={l === lang ? 'true' : undefined}
+                                            className={l === lang ? 'font-bold' : ''}
+                                        >
+                                            {switcherDict[l]}
+                                        </a>
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

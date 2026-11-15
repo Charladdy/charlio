@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { locales, defaultLocale } from '@/lib/i18n/locales';
+import { sanityFetch } from '@/lib/sanity/fetch';
+import { POST_SLUGS_QUERY } from '@/lib/sanity/queries';
 
 const BASE_URL = 'https://www.charl.io';
 
@@ -25,8 +27,8 @@ const pages: Array<{
   { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.flatMap(({ path, changeFrequency, priority }) => {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const localizedEntries = pages.flatMap(({ path, changeFrequency, priority }) => {
     const languages = Object.fromEntries([
       ...locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
       ['x-default', `${BASE_URL}/${defaultLocale}${path}`],
@@ -39,4 +41,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages },
     }));
   });
+
+  // Journal posts are Sanity-authored and English-only (no locale variants),
+  // so unlike the pages above they're fetched rather than hand-maintained.
+  const postSlugs = await sanityFetch<{ slug: string }[]>({
+    query: POST_SLUGS_QUERY,
+    tags: ['post'],
+  });
+
+  const journalEntries: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/journal`, changeFrequency: 'weekly', priority: 0.6 },
+    ...postSlugs.map(({ slug }) => ({
+      url: `${BASE_URL}/journal/${slug}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    })),
+  ];
+
+  return [...localizedEntries, ...journalEntries];
 }

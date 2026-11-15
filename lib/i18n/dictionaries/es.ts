@@ -63,6 +63,7 @@ const dictionary = {
       ourServices: 'Nuestros Servicios',
       portfolio: 'Portafolio',
       pricing: 'Precios',
+      journal: 'Blog',
       contactUs: 'Contáctanos',
     },
     heroText: {

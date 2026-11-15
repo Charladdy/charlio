@@ -37,5 +37,7 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
+  // journal is excluded because it's Sanity-authored and English-only (no
+  // locale variants), so it lives outside /[lang] as its own root layout.
+  matcher: ['/((?!api|journal|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
 };

@@ -55,6 +55,7 @@ export default async function MainLayout({
           { label: dict.main.nav.ourServices, href: `/${lang}/services` },
           { label: dict.main.nav.portfolio, href: `/${lang}/portfolio` },
           { label: dict.main.nav.pricing, href: `/${lang}/pricing` },
+          { label: dict.main.nav.journal, href: '/journal' },
           { label: dict.main.nav.contactUs, href: `/${lang}/contact` },
         ]} />
         <Link href={`/${lang}`} className="navbar-logo-wrapper">
